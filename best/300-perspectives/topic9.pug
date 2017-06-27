@@ -20,7 +20,7 @@
         li#a1 Apply Design Guidelines
         li#a2 Use SASS and Preprocessors
         li#a3 Use Pug for maintainable HTML
-        li#a4 Go max static w/CNN for Perf.
+        li#a4 Go max static w/CDN for Perf.
         li#a5 Use AppShell and page transitions
         li#a6 Use AMP and please visitors
         li#a7 Be DOM-centric and designer-friendly
@@ -46,9 +46,9 @@ script.
             tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
             tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
             tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
-            tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+            tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
             tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
             tl.play();
         }

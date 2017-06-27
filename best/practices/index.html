@@ -23,8 +23,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div><img class="mui--z3" id="globe" style="top:16vw;" src="/best/master/res/globe.jpg">
             <div class="mui--z2" id="bicolorbar1" style="top:27.5vw;"></div>
             <div id="bicolorbar2" style="top:27.2vw;"></div>
@@ -63,8 +63,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="stepsp">
               <div class="headline" style="top:11.5vw;">3 Easy Steps to Best Practices</div>
@@ -86,22 +86,23 @@
               function stepsLoaded(){
                   if (animatePage5)
                   {
+                      console.log('stepsLoaded')
                       var tl = new TimelineMax();
                       tl[5] = tl;
-                      var bx1 = $('#stepsp #bx1'); bx2 = $('stepsp #bx2'); bx3 = $('stepsp #bx3');                 
+                      var bx1 = $('#stepsp #bx1'); bx2 = $('#stepsp #bx2'); bx3 = $('#stepsp #bx3');                 
               
-                      tl.to(bx1, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 3, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 3, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 2, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 2, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-                      tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
-                      tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 4);
-                      tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 4);
-                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 4);
-                      tl.to(bx3, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 8);
-                      tl.to(bx3, 3, {opacity:100, ease:Power1.easeIn}, 8);
-                      tl.from(bx3, 3, {scale:.93, ease:Power1.easeIn}, 8);
-                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 8);
+                      tl.to(bx2, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 3);
+                      tl.to(bx2, 2, {opacity:100, ease:Power2.easeIn}, 3);
+                      tl.from(bx2, 2, {scale:.93, ease:Power1.easeIn}, 3);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 3);
+                      tl.to(bx3, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 6);
+                      tl.to(bx3, 2, {opacity:100, ease:Power1.easeIn}, 6);
+                      tl.from(bx3, 2, {scale:.93, ease:Power1.easeIn}, 6);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 6);
                       tl.play();
                   }
               }
@@ -109,10 +110,10 @@
                   animatePage5 = animate;
                   if (animatePage5)
                   {
-                      $('stepsp .box').css('opacity',0);
-                      $('stepsp .box').css('filter', 'grayscale(100%)');
-                      $('stepsp .box').css('-webkit-filter', 'grayscale(100%)');
-                      $('stepsp .box').removeClass("mui--z4");
+                      $('#stepsp .box').css('opacity',0);
+                      $('#stepsp .box').css('filter', 'grayscale(100%)');
+                      $('#stepsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#stepsp .box').removeClass("mui--z4");
                   }    
               } 
             </script>
@@ -127,8 +128,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topicsp">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -171,18 +172,18 @@
                       tl[5] = tl;
                       var bx1 = $('#topicsp #bx1v'); bx2 = $('#topicsp #bx2v'); bx3 = $('#topicsp #bx3v');                 
               
-                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-                      tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
-                      tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
-                      tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
-                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
-                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
-                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
-                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
-                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
                       tl.play();
                   }
               }
@@ -208,8 +209,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="step1p">
               <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
@@ -227,9 +228,9 @@
                       tl[5] = tl;
                       var bx1 = $('#step1p #bx1'); 
               
-                      tl.to(bx1, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 3, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 3, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
                       tl.play();
                   }
@@ -256,8 +257,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic1p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -318,8 +319,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic2p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -342,9 +343,9 @@
                       tl[5] = tl;
                       var bx1 = $('#topic2p #bx1v'); bx2 = $('#topic2p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
               
-                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
                       //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
                       //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
@@ -379,8 +380,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic3p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -441,8 +442,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic4p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -466,9 +467,9 @@
                       tl[5] = tl;
                       var bx1 = $('#topic4p #bx1v'); bx2 = $('#topic4p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
               
-                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
                       //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
                       //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
@@ -503,8 +504,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="steps2p">
               <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
@@ -563,8 +564,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic5p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -579,7 +580,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
               <ul class="step step2">     
                 <li class="t--selected" id="a5">Use AppShell and page transitions to improve perceived performance</li>
@@ -635,8 +636,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic6p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -651,7 +652,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
               <ul class="step step2">     
                 <li class="t--selected" id="a5">Use AppShell and page transitions to improve perceived performance</li>
@@ -707,8 +708,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic7p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -723,7 +724,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
               <ul class="step step2">     
                 <li id="a5">Use AppShell and page transitions</li>
@@ -779,8 +780,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic8p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -795,7 +796,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
               <ul class="step step2">     
                 <li id="a5d">Use AppShell and page transitions</li>
@@ -851,8 +852,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="steps3p">
               <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
@@ -915,8 +916,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic9p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -935,7 +936,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
                 <li id="a5">Use AppShell and page transitions</li>
                 <li id="a6">Use AMP and please visitors</li>
                 <li id="a7">Be DOM-centric and designer-friendly</li>
@@ -962,9 +963,9 @@
                       tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
                       tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
-                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
                       tl.play();
                   }
@@ -991,8 +992,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="topic10p">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -1011,7 +1012,7 @@
                 <li id="a1">Apply Design Guidelines</li>
                 <li id="a2">Use SASS and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
-                <li id="a4">Go max static w/CNN for Perf.</li>
+                <li id="a4">Go max static w/CDN for Perf.</li>
                 <li id="a5">Use AppShell and page transitions</li>
                 <li id="a6">Use AMP and please visitors</li>
                 <li id="a7">Be DOM-centric and designer-friendly</li>
@@ -1037,9 +1038,9 @@
                       tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
                       tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
-                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
                       tl.play();
                   }
@@ -1066,8 +1067,8 @@
             <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
             <div class="mui--z1" id="bar"></div>
             <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="commandmentsp">
               <div class="box box-1v box-1--selected" id="bx1v">
@@ -1086,7 +1087,7 @@
                 <li class="t--selected" id="a1">Apply Design Guidelines</li>
                 <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
                 <li class="t--selected" id="a3">Use Pug for clean HTML</li>
-                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+                <li class="t--selected" id="a4">Go max static w/CDN for Perf.</li>
               </ul>
               <ul class="step step2">     
                 <li class="t--selected" id="a5">Use AppShell w/page transitions</li>
@@ -1144,7 +1145,7 @@
       TS.onAppReady(UIinit)
       function UIinit() {
           $('#fullpage').fullpage({
-              anchors: ['title', '3steps', 'topics'
+              anchors: ['title', 'steps', 'topics'
                   ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
                   ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
                   ,'steps3', 'topic9', 'topic10'
