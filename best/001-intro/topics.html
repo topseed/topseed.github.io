@@ -1,0 +1,67 @@
+
+<div id="topicsp">
+  <div class="box box-1v box-1--selected" id="bx1v">
+    <div class="box--middle">
+       Step 1:<br/>The basics</div>
+  </div>
+  <div class="box box-2v box-2--selected" id="bx2v">
+    <div class="box--middle">
+       Step 2:<br/>The bricks and mortar</div>
+  </div>
+  <div class="box box-3v box-3--selected" id="bx3v">
+    <div class="box--middle">
+       Step 3:<br/>The perspectives</div>
+  </div>
+  <ul class="step step1">
+    <li id="a1">Design Guidelines</li>
+    <li id="a2">Better CSS</li>
+    <li id="a3">Better HTML</li>
+    <li id="a4">Performance</li>
+  </ul>
+  <ul class="step step2">     
+    <li id="a5">SPA/Rich client 'feel'</li>
+    <li id="a6">Time to Glass</li>
+    <li id="a7">HTML vs. JavaScript</li>
+    <li id="a8">Business Logic</li>
+  </ul>
+  <ul class="step step3">    
+    <li id="a9">Web Components</li>
+    <li id="a10">Mobile Apps        </li>
+  </ul>
+</div>
+<script>
+  var animateCommandments = true;
+  function commandmentsLoaded(){
+      if (animateCommandments)
+      {
+          console.log('commandmentsLoaded');
+          var tl = new TimelineMax();
+          tl[5] = tl;
+          var bx1 = $('#topicsp #bx1v'); bx2 = $('#topicsp #bx2v'); bx3 = $('#topicsp #bx3v');                 
+  
+          tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+          tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+          tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+          tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+          tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+          tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+          tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+          tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+          tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+          tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+          tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+          tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+          tl.play();
+      }
+  }
+  function page5Setup(animate){
+      animatePage5 = animate;
+      if (animatePage5)
+      {
+          $('#topicsp .box').css('opacity',0);
+          $('#topicsp .box').css('filter', 'grayscale(100%)');
+          $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+          $('#topicsp .box').removeClass("mui--z4");
+      }    
+  } 
+</script>

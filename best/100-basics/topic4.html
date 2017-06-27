@@ -1,0 +1,49 @@
+
+<div id="topic4p">
+  <div class="box box-1v box-1--selected" id="bx1v">
+    <div class="box--middle">
+       Step 1:<br/>The basics</div>
+  </div>
+  <ul class="step step1">
+    <li class="t--selected" id="a1">Apply Design Guidelines</li>
+    <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+    <li class="t--selected" id="a3">Use Pug for clean, maintainable HTML</li>
+    <li class="t--selected" id="a4">Go (max) static, deploy to CDN edge cache to scale for performance</li>
+  </ul>
+</div>
+<script>
+  var animatetopic1 = true;
+  function topic4Loaded(){
+      if (animatetopic1)
+      {
+          console.log('commandmentsLoaded');
+          var tl = new TimelineMax();
+          tl[5] = tl;
+          var bx1 = $('#topic4p #bx1v'); bx2 = $('#topic4p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+  
+          tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+          tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+          tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+          tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+          //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+          //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+          //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+          //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+          //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+          //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+          //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+          //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+          //-tl.play();
+      }
+  }
+  function page5Setup(animate){
+      animatetopic1 = animate;
+      if (animatetopic1)
+      {
+          $('#topic4p .box').css('opacity',0);
+          $('#topic4p .box').css('filter', 'grayscale(100%)');
+          $('#topic4p .box').css('-webkit-filter', 'grayscale(100%)');
+          $('#topic4p .box').removeClass("mui--z4");
+      }    
+  } 
+</script>

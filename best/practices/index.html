@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Best Practices 2017</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono">
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/topseed/topseed-turbo/master/vendor/loadjs.min.js"></script>
+    <script src="https://cdn.rawgit.com/topseed/topseed-turbo/master/setup/setup-4.2.js"></script>
+    <script src="../_js/main.js" async=""></script>
+  </head>
+  <body style="margin:0;">
+    <link rel="stylesheet" href="../_sass/_slide.css" lazyload="1">
+    <div id="fullpage">
+      <div class="section active">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div><img class="mui--z3" id="globe" style="top:16vw;" src="/best/master/res/globe.jpg">
+            <div class="mui--z2" id="bicolorbar1" style="top:27.5vw;"></div>
+            <div id="bicolorbar2" style="top:27.2vw;"></div>
+            <div class="headline" id="sem" style="top:35vw;">Web Apps Front-End Best Practices 2017</div>
+            <div class="headline headline__sub" id="sub" style="top:40.5vw;">Meetup </div>
+            <div class="headline headline__sub2" id="sub2" style="top:44vw;">Wolfgang Gehner @ Regus Irvine, California, Jun. 27, 2017  </div>
+            <script>
+              var animatePage1 = true;
+              function titleLoaded(){
+                  if (animatePage1)
+                  {
+                      var tl = new TimelineMax();
+                      tl[1] = tl;
+                      tl.from($('#sem'), 3, {x:-2000, ease:Bounce.easeOut}, '+=1');
+                      tl.to($('#globe'), 3, {opacity:100, rotationY:360, transformOrigin:"right 50% -200"});
+                      tl.from($('#sub'), 2, {x:-2000, ease:Power4.easeOut}, '+=0');
+                      tl.from($('#sub2'), 2, {y:2000, ease:Power2.easeOut}, '+=0');
+                      tl.from($('#bicolorbar2'), 1, {x:-2000, ease:Power4.easeOut}, '+=2');
+                      tl.from($('#bicolorbar1'), 1, {x:-2000, ease:Power4.easeOut}, '+=0');
+                      tl.play();
+                  }
+              }
+              
+              function page1Setup(animate){
+                  animatePage1 = animate;
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="stepsp">
+              <div class="headline" style="top:11.5vw;">3 Easy Steps to Best Practices</div>
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2 box-2--selected" id="bx2"> 
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <div class="box box-3 box-3--selected" id="bx3"> 
+                <div class="box--middle">
+                   Step 3:<br>The perspectives</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function stepsLoaded(){
+                  if (animatePage5)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#stepsp #bx1'); bx2 = $('stepsp #bx2'); bx3 = $('stepsp #bx3');                 
+              
+                      tl.to(bx1, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 3, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 3, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 4);
+                      tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 4);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 4);
+                      tl.to(bx3, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 8);
+                      tl.to(bx3, 3, {opacity:100, ease:Power1.easeIn}, 8);
+                      tl.from(bx3, 3, {scale:.93, ease:Power1.easeIn}, 8);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 8);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('stepsp .box').css('opacity',0);
+                      $('stepsp .box').css('filter', 'grayscale(100%)');
+                      $('stepsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('stepsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topicsp">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected" id="bx3v">
+                <div class="box--middle">
+                   Step 3:<br>The perspectives</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Design Guidelines</li>
+                <li class="t--selected" id="a2">CSS</li>
+                <li class="t--selected" id="a3">HTML</li>
+                <li class="t--selected" id="a4">Performance</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">SPA/Rich client 'feel'</li>
+                <li class="t--selected" id="a6">Time to Glass</li>
+                <li class="t--selected" id="a7">HTML vs. JavaScript</li>
+                <li class="t--selected" id="a8">Business Logic</li>
+              </ul>
+              <ul class="step step3">    
+                <li class="t--selected" id="a9">Web Components</li>
+                <li class="t--selected" id="a10">Mobile Apps        </li>
+              </ul>
+            </div>
+            <script>
+              var animateCommandments = true;
+              function topicsLoaded(){
+                  if (animateCommandments)
+                  {
+                      console.log('topicsLoaded')
+                     
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topicsp #bx1v'); bx2 = $('#topicsp #bx2v'); bx3 = $('#topicsp #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#topicsp .box').css('opacity',0);
+                      $('#topicsp .box').css('filter', 'grayscale(100%)');
+                      $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topicsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="step1p">
+              <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function step1Loaded(){
+                  if (animatePage5)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#step1p #bx1'); 
+              
+                      tl.to(bx1, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 3, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 3, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#step1p .box').css('opacity',0);
+                      $('#step1p .box').css('filter', 'grayscale(100%)');
+                      $('#step1p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#step1p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic1p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency</li>
+                <li id="a2">CSS</li>
+                <li id="a3">HTML</li>
+                <li id="a4">Performance</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic1Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic1p #bx1v'); bx2 = $('#topic1p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      //-tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topicsp .box').css('opacity',0);
+                      $('#topicsp .box').css('filter', 'grayscale(100%)');
+                      $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topicsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic2p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors for clean, maintainable CSS</li>
+                <li id="a3">HTML</li>
+                <li id="a4">Performance</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic2Loaded(){
+                  if (animatetopic1)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic2p #bx1v'); bx2 = $('#topic2p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      //-tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic2p .box').css('opacity',0);
+                      $('#topic2p .box').css('filter', 'grayscale(100%)');
+                      $('#topic2p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic2p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic3p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors for clean, maintainable CSS</li>
+                <li class="t--selected" id="a3">Use Pug for clean, maintainable HTML</li>
+                <li id="a4">Performance</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic3Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic3p #bx1v'); bx2 = $('#topic3p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      //-tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic3p .box').css('opacity',0);
+                      $('#topic3p .box').css('filter', 'grayscale(100%)');
+                      $('#topic3p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic3p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic4p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
+                <li class="t--selected" id="a4">Go (max) static, deploy to CDN edge cache to scale for performance</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic4Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic4p #bx1v'); bx2 = $('#topic4p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      //-tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic4p .box').css('opacity',0);
+                      $('#topic4p .box').css('filter', 'grayscale(100%)');
+                      $('#topic4p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic4p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="steps2p">
+              <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2 box-2--selected" id="bx2"> 
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function steps2Loaded(){
+                  if (animatePage5)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#steps2p #bx1'); bx2 = $('#steps2p #bx2'); //bx3 = $('#steps2p #bx3');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
+                      tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 1);
+                      tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 1);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 1);
+                      //tl.to(bx3, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 8);
+                     // tl.to(bx3, 3, {opacity:100, ease:Power1.easeIn}, 8);
+                      //tl.from(bx3, 3, {scale:.93, ease:Power1.easeIn}, 8);
+                      //tl.call(function() {bx3.addClass("mui--z4");}, null, null, 8);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#steps2p .box').css('opacity',0);
+                      $('#steps2p .box').css('filter', 'grayscale(100%)');
+                      $('#steps2p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#steps2p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic5p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
+                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">Use AppShell and page transitions to improve perceived performance</li>
+                <li id="a6">Time to Glass</li>
+                <li id="a7">HTML vs. JavaScript</li>
+                <li id="a8">Business Logic</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic5Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic5p #bx1v'); bx2 = $('#topic5p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic5p .box').css('opacity',0);
+                      $('#topic5p .box').css('filter', 'grayscale(100%)');
+                      $('#topic5p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic5p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic6p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
+                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">Use AppShell and page transitions to improve perceived performance</li>
+                <li class="t--selected" id="a6">Use AMP and please visitors</li>
+                <li id="a7">HTML vs. JavaScript</li>
+                <li id="a8">Business Logic</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic6Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic6p #bx1v'); bx2 = $('#topic6p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic6p .box').css('opacity',0);
+                      $('#topic6p .box').css('filter', 'grayscale(100%)');
+                      $('#topic6p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic6p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic7p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
+                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">Use AppShell and page transitions</li>
+                <li class="t--selected" id="a6">Use AMP and please visitors</li>
+                <li class="t--selected" id="a7">Be DOM-centric and designer-friendly</li>
+                <li id="a8">Business Logic</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic7Loaded(){
+                  if (animatetopic1) 
+                  {
+                      console.log('topic7Loaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic7p #bx1v'); bx2 = $('#topic7p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic7p .box').css('opacity',0);
+                      $('#topic7p .box').css('filter', 'grayscale(100%)');
+                      $('#topic7p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic7p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="topic8p">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
+                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">Use AppShell and page transitions</li>
+                <li class="t--selected" id="a6">Use AMP and please visitors</li>
+                <li class="t--selected" id="a7">Be DOM-centric and designer-friendly</li>
+                <li id="a8">Use PageBusiness and Fetch microservices for cleaner code</li>
+              </ul>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic7Loaded(){
+                  if (animatetopic1)
+                  {
+                      console.log('commandmentsLoaded');
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topic8p #bx1v'); bx2 = $('#topic8p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      //tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      //tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      //tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      //tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic8p .box').css('opacity',0);
+                      $('#topic8p .box').css('filter', 'grayscale(100%)');
+                      $('#topic8p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic8p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="steps3p">
+              <!--.headline(style='top:11.5vw') 3 Easy Steps to Best Practices-->
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2 box-2--selected" id="bx2"> 
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <div class="box box-3 box-3--selected" id="bx3"> 
+                <div class="box--middle">
+                   Step 3:<br>The perspectives</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function steps3Loaded(){
+                  if (animatePage5)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#steps3p #bx1'); bx2 = $('#steps3p #bx2'); bx3 = $('#steps3p #bx3');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 01);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
+                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 1);
+                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 1);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 1);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#steps3p .box').css('opacity',0);
+                      $('#steps3p .box').css('filter', 'grayscale(100%)');
+                      $('#steps3p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#steps3p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" rel="stylesheet" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/rfid-lime.svg" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/tag-lime.svg" alt="appThings"></div>
+            </div>
+            <div id="commandmentsp">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step 1:<br>The basics</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step 2:<br>The bricks and mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected" id="bx3v">
+                <div class="box--middle">
+                   Step 3:<br>The perspectives</div>
+              </div>
+              <ul class="step step1">
+                <li class="t--selected" id="a1">Apply Design Guidelines</li>
+                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a3">Use Pug for clean HTML</li>
+                <li class="t--selected" id="a4">Go max static w/CNN for Perf.</li>
+              </ul>
+              <ul class="step step2">     
+                <li class="t--selected" id="a5">Use AppShell+page transitions</li>
+                <li class="t--selected" id="a6">Use AMP for visitors </li>
+                <li class="t--selected" id="a7">Be DOM-centric+designer-friendly</li>
+                <li class="t--selected" id="a8">Use PageBusiness and Fetch</li>
+              </ul>
+              <ul class="step step3">    
+                <li class="t--selected" id="a9">Use Web Components as LEGO</li>
+                <li class="t--selected" id="a10">Use Phonegap+In-app browser     </li>
+              </ul>
+            </div>
+            <script>
+              var animateCommandments = true;
+              function commandmentsLoaded(){
+                  if (animateCommandments)
+                  {
+                      console.log('topicsLoaded')
+                     
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#commandmentsp #bx1v'); bx2 = $('#commandmentsp #bx2v'); bx3 = $('#commandmentsp #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animateCommandments = animate;
+                  if (animateCommandments)
+                  {
+                      $('#commandmentsp .box').css('opacity',0);
+                      $('#commandmentsp .box').css('filter', 'grayscale(100%)');
+                      $('#commandmentsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#commandmentsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      TS.onAppReady(UIinit)
+      function UIinit() {
+          $('#fullpage').fullpage({
+              anchors: ['title', '3steps', 'topics'
+                  ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
+                  ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
+                  ,'steps3', 'topic9', 'topic10', 'topic10end'
+                  ,'commandments'],
+              scrollBar: true,
+              /*navigation: true,
+              navigationPosition: 'right',
+              navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5'],*/
+              afterLoad: function(anchorLink, index){
+                  console.log('anchorLink'+anchorLink)
+                  switch (anchorLink)
+                  {
+                       case 'title': titleLoaded(); return
+                      case 'steps': stepsLoaded(); return
+                      case 'topics': topicsLoaded(); return
+                      case 'step1': step1Loaded(); return
+                      case 'topic1': topic1Loaded(); return
+                      case 'topic2': topic2Loaded(); return
+                      case 'topic3': topic3Loaded(); return
+                      case 'topic4': topic4Loaded(); return
+                      case 'steps2': steps2Loaded(); return
+                      case 'topic5': topic5Loaded(); return
+                      case 'topic6': topic6Loaded(); return
+                      case 'topic7': topic7Loaded(); return
+                      case 'topic8': topic8Loaded(); return
+                      case 'steps3': steps3Loaded(); return 
+                      
+                      //case 'commandments': commandmentsLoaded(); return
+      
+                      //default: titleLoaded(); return
+                  }
+              },
+              onLeave: function(index, nextIndex, direction){
+                  
+                  //tl[index].pause();
+                  switch (nextIndex)
+                  {
+                      //case 1: page1Setup(nextIndex>index); return true
+                      //case 2: page2Setup(nextIndex>index); true
+                      //case 3: page3Setup(nextIndex>index); true
+                      //case 4: page5Setup(nextIndex>index); return true
+                      //case 5: page5Setup(nextIndex>index); return true
+                  }
+              }
+          });
+      }
+      
+    </script>
+  </body>
+</html>

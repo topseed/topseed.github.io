@@ -1,0 +1,27 @@
+img#globe.mui--z3(style='top:16vw', src='/best/master/res/globe.jpg')
+#bicolorbar1.mui--z2(style='top:27.5vw')
+#bicolorbar2(style='top:27.2vw')
+#sem.headline(style='top:35vw') Web Apps Front-End Best Practices 2017
+#sub.headline.headline__sub(style='top:40.5vw') Meetup 
+#sub2.headline.headline__sub2(style='top:44vw') Wolfgang Gehner @ Regus Irvine, California, Jun. 27, 2017  
+
+script.
+    var animatePage1 = true;
+    function titleLoaded(){
+        if (animatePage1)
+        {
+            var tl = new TimelineMax();
+            tl[1] = tl;
+            tl.from($('#sem'), 3, {x:-2000, ease:Bounce.easeOut}, '+=1');
+            tl.to($('#globe'), 3, {opacity:100, rotationY:360, transformOrigin:"right 50% -200"});
+            tl.from($('#sub'), 2, {x:-2000, ease:Power4.easeOut}, '+=0');
+            tl.from($('#sub2'), 2, {y:2000, ease:Power2.easeOut}, '+=0');
+            tl.from($('#bicolorbar2'), 1, {x:-2000, ease:Power4.easeOut}, '+=2');
+            tl.from($('#bicolorbar1'), 1, {x:-2000, ease:Power4.easeOut}, '+=0');
+            tl.play();
+        }
+    }
+
+    function page1Setup(animate){
+        animatePage1 = animate;
+    } 

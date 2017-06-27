@@ -1,0 +1,141 @@
+extends  ../_part/_baseShell
+
+block head
+    title Best Practices 2017
+    include ../_part/_header
+
+block main
+    #fullpage
+        .section.active
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../001-intro/title
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../001-intro/steps
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../001-intro/topics
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/step1
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic1
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic2
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic3
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic4
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/steps2
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/topic5
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/topic6
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/topic7
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/topic8
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/steps3
+
+
+
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../001-intro/commandments
+
+    script.
+        TS.onAppReady(UIinit)
+        function UIinit() {
+            $('#fullpage').fullpage({
+                anchors: ['title', '3steps', 'topics'
+                    ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
+                    ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
+                    ,'steps3', 'topic9', 'topic10', 'topic10end'
+                    ,'commandments'],
+                scrollBar: true,
+                /*navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5'],*/
+                afterLoad: function(anchorLink, index){
+                    console.log('anchorLink'+anchorLink)
+                    switch (anchorLink)
+                    {
+                         case 'title': titleLoaded(); return
+                        case 'steps': stepsLoaded(); return
+                        case 'topics': topicsLoaded(); return
+                        case 'step1': step1Loaded(); return
+                        case 'topic1': topic1Loaded(); return
+                        case 'topic2': topic2Loaded(); return
+                        case 'topic3': topic3Loaded(); return
+                        case 'topic4': topic4Loaded(); return
+                        case 'steps2': steps2Loaded(); return
+                        case 'topic5': topic5Loaded(); return
+                        case 'topic6': topic6Loaded(); return
+                        case 'topic7': topic7Loaded(); return
+                        case 'topic8': topic8Loaded(); return
+                        case 'steps3': steps3Loaded(); return 
+                        
+                        //case 'commandments': commandmentsLoaded(); return
+
+                        //default: titleLoaded(); return
+                    }
+                },
+                onLeave: function(index, nextIndex, direction){
+                    
+                    //tl[index].pause();
+                    switch (nextIndex)
+                    {
+                        //case 1: page1Setup(nextIndex>index); return true
+                        //case 2: page2Setup(nextIndex>index); true
+                        //case 3: page3Setup(nextIndex>index); true
+                        //case 4: page5Setup(nextIndex>index); return true
+                        //case 5: page5Setup(nextIndex>index); return true
+                    }
+                }
+            });
+        }
+
+block footer
+    include ../_part/_footer
