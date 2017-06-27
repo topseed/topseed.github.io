@@ -1,4 +1,4 @@
-#topic6p
+#topic9p
     //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
     #bx1v.box.box-1v.box-1--selected
         .box--middle 
@@ -10,7 +10,7 @@
             //-| Step 2:
             //-br
             | The Bricks and Mortar
-    //-#bx3v.box.box-3v.box-3--selected
+    #bx3v.box.box-3v.box-3--selected
         .box--middle 
             | Step 3:
             br
@@ -21,24 +21,22 @@
         li#a2 Use SASS and Preprocessors
         li#a3 Use Pug for maintainable HTML
         li#a4 Go max static w/CNN for Perf.
-    ul.step.step2      
-        li#a5.t--selected Use AppShell and page transitions to improve perceived performance
-        li#a6.t--selected Use AMP and please visitors
-        li#a7 HTML vs. JavaScript
-        li#a8 Business Logic
-    //-ul.step.step3     
-        li#a9 Web Components
+        li#a5 Use AppShell and page transitions
+        li#a6 Use AMP and please visitors
+        li#a7 Be DOM-centric and designer-friendly
+        li#a8.t--selected Use PageBusiness and Fetch microservices for cleaner code
+        li#a9.t--selected Use web components to be LEGO
         li#a10 Mobile Apps        
 
 script.
     var animatetopic1 = true;
-    function topic6Loaded(){
+    function topic9Loaded(){
         if (animatetopic1)
         {
             console.log('commandmentsLoaded');
             var tl = new TimelineMax();
             tl[5] = tl;
-            var bx1 = $('#topic6p #bx1v'); bx2 = $('#topic6p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
+            var bx1 = $('#topic9p #bx1v'); bx2 = $('#topic9p #bx2v'); bx3 = $('#topic9p #bx3v');                 
 
             tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
             tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
@@ -48,10 +46,10 @@ script.
             tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
             tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
             tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
-            //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
-            //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
-            //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
-            //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+            tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+            tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
             tl.play();
         }
     }
@@ -59,9 +57,9 @@ script.
         animatetopic1 = animate;
         if (animatetopic1)
         {
-            $('#topic6p .box').css('opacity',0);
-            $('#topic6p .box').css('filter', 'grayscale(100%)');
-            $('#topic6p .box').css('-webkit-filter', 'grayscale(100%)');
-            $('#topic6p .box').removeClass("mui--z4");
+            $('#topic9p .box').css('opacity',0);
+            $('#topic9p .box').css('filter', 'grayscale(100%)');
+            $('#topic9p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic9p .box').removeClass("mui--z4");
         }    
     } 

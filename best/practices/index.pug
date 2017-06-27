@@ -76,6 +76,16 @@ block main
                 .mui--text-center
                     include ../_part/_top
                     include ../300-perspectives/steps3
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/topic9
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/topic10
 
 
 
@@ -83,7 +93,7 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../001-intro/commandments
+                    include ../400-end/commandments
 
     script.
         TS.onAppReady(UIinit)
@@ -92,7 +102,7 @@ block main
                 anchors: ['title', '3steps', 'topics'
                     ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
                     ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
-                    ,'steps3', 'topic9', 'topic10', 'topic10end'
+                    ,'steps3', 'topic9', 'topic10'
                     ,'commandments'],
                 scrollBar: true,
                 /*navigation: true,
@@ -116,8 +126,9 @@ block main
                         case 'topic7': topic7Loaded(); return
                         case 'topic8': topic8Loaded(); return
                         case 'steps3': steps3Loaded(); return 
-                        
-                        //case 'commandments': commandmentsLoaded(); return
+                        case 'topic9': topic9Loaded(); return
+                        case 'topic10': topic10Loaded(); return
+                        case 'commandments': commandmentsLoaded(); return
 
                         //default: titleLoaded(); return
                     }
