@@ -15,6 +15,11 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../001-intro/who
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../001-intro/steps
         .section
             #header
@@ -214,7 +219,7 @@ block main
         TS.onAppReady(UIinit)
         function UIinit() {
             $('#fullpage').fullpage({
-                anchors: ['title', 'steps', 'topics'
+                anchors: ['title', 'who', 'steps', 'topics'
                     , 'step1', 'topic1', 'material', 'mui' 
                     , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
                     , 'topic3', 'pug' 

@@ -17,7 +17,18 @@
     @extend .mui--z1;
 } 
 
+
+
 //images
+
+#whoami {
+     @extend .screenshot;
+     top: 10vw;
+     left: 20vw;
+     width: 45vw;
+     height: 45vw;
+}
+
 #md {
      @extend .screenshot;
      height:33.6vw;
