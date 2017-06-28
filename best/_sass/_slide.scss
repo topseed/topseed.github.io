@@ -24,7 +24,7 @@
 #whoami {
      @extend .screenshot;
      top: 10vw;
-     left: 20vw;
+     left: 30vw;
      width: 45vw;
      height: 45vw;
 }
@@ -34,17 +34,17 @@
      height:33.6vw;
 }
 
-#mui {
+#muiimg {
      @extend .screenshot;
      height:33.6vw;
 }
 
-#brokencss {
+#brokencssimg {
      @extend .screenshot;
      height:33.6vw;
 }
 
-#fixedcss {
+#fixedcssimg {
      @extend .screenshot;
      height:28.6vw;
      @extend .mui--z2;
@@ -55,12 +55,12 @@
      height:35.6vw;
 }
 
-#prepros {
+#preprosimg {
      @extend .screenshot;
      height: 32.5vw;
 }
 
-#pug {
+#pugimg {
      @extend .screenshot;
      left: 16vw;
      width: 67.2vw;
@@ -74,25 +74,25 @@
      height: 33.6vw;
 }
 
-#appshell {
+#appshellimg {
      @extend .screenshot;
      height: 35.8vw;
 }
 
-#trans {
+#transimg {
      @extend .screenshot;
      left: 31vw;
      width: 36vw;
      height: 31.2vw;
 }
 
-#amp {
+#ampimg {
      @extend .screenshot;
      height: 33vw;
      @extend .mui--z2;
 }
 
-#ampsource {
+#ampsrc {
     @extend .screenshot;
     left: 16vw;
     width: 67.2vw;
@@ -119,7 +119,7 @@
      height: 34vw;
 }
 
-#promise {
+#promiseimg {
      @extend .screenshot;
      left: 31vw;
      width: 36vw;
