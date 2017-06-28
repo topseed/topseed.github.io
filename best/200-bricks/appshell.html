@@ -1,0 +1,29 @@
+
+<div id="appshellp">
+  <div class="topicbox topicbox-2 mui--z4"> 
+    <div class="topicbox--middle">Use AppShell to create a 'Rich client feel' and improve perceived performance</div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+  <div class="thumb thumb-3 mui--z1"></div>
+  <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="cdn" src="../200-bricks/res/appshell.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function appshellLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#appshellp #tbd').css('opacity',0);
+  }
+</script>

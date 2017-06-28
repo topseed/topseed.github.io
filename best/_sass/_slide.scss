@@ -63,6 +63,24 @@
      height: 33.6vw;
 }
 
+#appshell {
+     @extend .screenshot;
+     height: 35.8vw;
+}
+
+#trans {
+     @extend .screenshot;
+     left: 31vw;
+     width: 36vw;
+     height: 31.2vw;
+}
+
+#amp {
+     @extend .screenshot;
+     height: 33vw;
+     @extend .mui--z2;
+}
+
 
 
 .section {
