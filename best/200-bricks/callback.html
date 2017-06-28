@@ -1,0 +1,29 @@
+
+<div id="callbackep">
+  <div class="topicbox topicbox-2 mui--z4"> 
+    <div class="topicbox--middle">Have you encountered 'Callback Hell'?</div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+  <div class="thumb thumb-3 mui--z1"></div>
+  <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="callback" src="../200-bricks/res/callback.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function callbackLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#callbackp #tbd').css('opacity',0);
+  }
+</script>

@@ -1,0 +1,29 @@
+
+<div id="domp">
+  <div class="topicbox topicbox-2 mui--z4"> 
+    <div class="topicbox--middle">We prefer to use the Document-Object Model over JavaScript whereever possible. This is designer-friendly and more maintainable. </div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+  <div class="thumb thumb-3 mui--z1"></div>
+  <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="dom" src="../200-bricks/res/dom.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function domLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#domp #tbd').css('opacity',0);
+  }
+</script>

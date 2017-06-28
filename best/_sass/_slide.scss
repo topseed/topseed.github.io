@@ -81,6 +81,45 @@
      @extend .mui--z2;
 }
 
+#ampsource {
+    @extend .screenshot;
+    left: 16vw;
+    width: 67.2vw;
+    height: 27.6vw;
+}
+
+#javascript {
+     @extend .screenshot;
+     height: 33.6vw;
+}
+
+#dom {
+     @extend .screenshot;
+     left: 31vw;
+     width: 36vw;
+     height: 31.2vw;
+}
+
+#callback {
+     @extend .screenshot;
+     left: 16vw;
+     width: 67.2vw;
+     height: 34vw;
+}
+
+#promise {
+     @extend .screenshot;
+     left: 31vw;
+     width: 36vw;
+     height: 29vw;
+}
+
+#fetch {
+     @extend .screenshot;
+     //left: 31vw;
+     //width: 36vw;
+     height: 24.3vw;
+}
 
 
 .section {

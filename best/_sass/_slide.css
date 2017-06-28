@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp {
+.mui--z1, .screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp, #ampsource, #javascript, #dom, #callback, #promise, #fetch {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp {
+.screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp, #ampsource, #javascript, #dom, #callback, #promise, #fetch {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -61,6 +61,32 @@
 
 #amp {
   height: 33vw; }
+
+#ampsource {
+  left: 16vw;
+  width: 67.2vw;
+  height: 27.6vw; }
+
+#javascript {
+  height: 33.6vw; }
+
+#dom {
+  left: 31vw;
+  width: 36vw;
+  height: 31.2vw; }
+
+#callback {
+  left: 16vw;
+  width: 67.2vw;
+  height: 34vw; }
+
+#promise {
+  left: 31vw;
+  width: 36vw;
+  height: 29vw; }
+
+#fetch {
+  height: 24.3vw; }
 
 .section {
   min-height: 56.25vw !important;
