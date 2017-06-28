@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp, #ampsource, #javascript, #dom, #callback, #promise, #fetch {
+.mui--z1, .screenshot, #md, #mui, #brokencss, #fixedcss, #bemimg, #prepros, #pug, #cdnimg, #appshell, #trans, #amp, #ampsource, #javascrt, #domimg, #callb, #promise, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn, #appshell, #trans, #amp, #ampsource, #javascript, #dom, #callback, #promise, #fetch {
+.screenshot, #md, #mui, #brokencss, #fixedcss, #bemimg, #prepros, #pug, #cdnimg, #appshell, #trans, #amp, #ampsource, #javascrt, #domimg, #callb, #promise, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -35,7 +35,7 @@
 #fixedcss {
   height: 28.6vw; }
 
-#bem {
+#bemimg {
   height: 35.6vw; }
 
 #prepros {
@@ -46,7 +46,7 @@
   width: 67.2vw;
   height: 34.9vw; }
 
-#cdn {
+#cdnimg {
   left: 31vw;
   width: 36vw;
   height: 33.6vw; }
@@ -67,15 +67,16 @@
   width: 67.2vw;
   height: 27.6vw; }
 
-#javascript {
+#javascrt {
+  top: 20vw;
   height: 33.6vw; }
 
-#dom {
+#domimg {
   left: 31vw;
   width: 36vw;
   height: 31.2vw; }
 
-#callback {
+#callb {
   left: 16vw;
   width: 67.2vw;
   height: 34vw; }
@@ -85,8 +86,35 @@
   width: 36vw;
   height: 29vw; }
 
-#fetch {
+#fetchi {
   height: 24.3vw; }
+
+#legos {
+  left: 16vw;
+  width: 67.2vw;
+  height: 31.2vw; }
+
+#dash {
+  height: 31.9vw; }
+
+#relig {
+  left: 16vw;
+  width: 67.2vw;
+  height: 35vw; }
+
+#agauge {
+  top: 20vw;
+  height: 35.6vw; }
+
+#brows {
+  left: 32vw;
+  width: 45vw;
+  height: 35vw; }
+
+#phoneg {
+  height: 35vw;
+  width: 29.4vw;
+  left: 35vw; }
 
 .section {
   min-height: 56.25vw !important;

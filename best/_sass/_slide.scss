@@ -39,7 +39,7 @@
      @extend .mui--z2;
 }
 
-#bem {
+#bemimg {
      @extend .screenshot;
      height:35.6vw;
 }
@@ -56,7 +56,7 @@
      height: 34.9vw;
 }
 
-#cdn {
+#cdnimg {
      @extend .screenshot;
      left: 31vw;
      width: 36vw;
@@ -88,19 +88,20 @@
     height: 27.6vw;
 }
 
-#javascript {
+#javascrt {
      @extend .screenshot;
+     top: 20vw;
      height: 33.6vw;
 }
 
-#dom {
+#domimg {
      @extend .screenshot;
      left: 31vw;
      width: 36vw;
      height: 31.2vw;
 }
 
-#callback {
+#callb {
      @extend .screenshot;
      left: 16vw;
      width: 67.2vw;
@@ -114,13 +115,51 @@
      height: 29vw;
 }
 
-#fetch {
+#fetchi {
      @extend .screenshot;
-     //left: 31vw;
-     //width: 36vw;
      height: 24.3vw;
 }
 
+#legos {
+     @extend .screenshot;
+     left: 16vw;
+     width: 67.2vw;
+     height: 31.2vw;
+}
+
+#dash {
+     @extend .screenshot;
+     height: 31.9vw;
+}
+
+#relig {
+     @extend .screenshot;
+     left: 16vw;
+     width: 67.2vw;
+     height: 35vw;
+}
+
+#agauge {
+     @extend .screenshot;
+     top: 20vw;
+     height: 35.6vw;
+}
+
+#brows {
+    @extend .screenshot;
+    left: 32vw;
+    width: 45vw;
+    height: 35vw;
+}
+
+
+
+#phoneg {
+     @extend .screenshot;
+     height: 35vw;
+     width: 29.4vw;
+     left: 35vw;
+}
 
 .section {
     min-height:56.25vw !important;

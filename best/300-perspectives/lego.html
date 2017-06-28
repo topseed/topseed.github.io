@@ -1,0 +1,29 @@
+
+<div id="legop">
+  <div class="topicbox topicbox-3 mui--z4"> 
+    <div class="topicbox--middle">Web components must be like LEGO@trade;: Composable, reusable and modular. In addition, they must be able to communicate!</div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 mui--z1"></div>
+  <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+  <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="lego" src="../300-perspectives/res/lego.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function legoLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#lego #tbd').css('opacity',0);
+  }
+</script>
