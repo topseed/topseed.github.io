@@ -1,6 +1,69 @@
+
+
 .body {
     opacity: 1
 }
+
+.mui--z1 {box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)}
+.mui--z2 {box-shadow:0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)}
+.mui--z3 {box-shadow:0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)}
+.mui--z4 {box-shadow:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)}
+ 
+.screenshot {
+    position:absolute;
+    top:21vw; 
+    left:22vw;
+    width:56vw;
+    @extend .mui--z1;
+} 
+
+//images
+#md {
+     @extend .screenshot;
+     height:33.6vw;
+}
+
+#mui {
+     @extend .screenshot;
+     height:33.6vw;
+}
+
+#brokencss {
+     @extend .screenshot;
+     height:33.6vw;
+}
+
+#fixedcss {
+     @extend .screenshot;
+     height:28.6vw;
+     @extend .mui--z2;
+}
+
+#bem {
+     @extend .screenshot;
+     height:35.6vw;
+}
+
+#prepros {
+     @extend .screenshot;
+     height: 32.5vw;
+}
+
+#pug {
+     @extend .screenshot;
+     left: 16vw;
+     width: 67.2vw;
+     height: 34.9vw;
+}
+
+#cdn {
+     @extend .screenshot;
+     left: 31vw;
+     width: 36vw;
+     height: 33.6vw;
+}
+
+
 
 .section {
     min-height:56.25vw !important;
@@ -307,7 +370,7 @@ ul {
 
 #logo {
     position: absolute; 
-    left: 2vw;
+    left: 1vw;
     top: 45.7vw;
 }
 

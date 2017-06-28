@@ -1,6 +1,56 @@
 .body {
   opacity: 1; }
 
+.mui--z1, .screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.mui--z2, #fixedcss {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.mui--z3 {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.mui--z4 {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.screenshot, #md, #mui, #brokencss, #fixedcss, #bem, #prepros, #pug, #cdn {
+  position: absolute;
+  top: 21vw;
+  left: 22vw;
+  width: 56vw; }
+
+#md {
+  height: 33.6vw; }
+
+#mui {
+  height: 33.6vw; }
+
+#brokencss {
+  height: 33.6vw; }
+
+#fixedcss {
+  height: 28.6vw; }
+
+#bem {
+  height: 35.6vw; }
+
+#prepros {
+  height: 32.5vw; }
+
+#pug {
+  left: 16vw;
+  width: 67.2vw;
+  height: 34.9vw; }
+
+#cdn {
+  left: 31vw;
+  width: 36vw;
+  height: 33.6vw; }
+
 .section {
   min-height: 56.25vw !important;
   overflow: hidden; }
@@ -314,7 +364,7 @@ ul {
 
 #logo {
   position: absolute;
-  left: 2vw;
+  left: 1vw;
   top: 45.7vw; }
 
 #logo--rfid {

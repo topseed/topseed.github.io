@@ -162,9 +162,9 @@
               </ul>
             </div>
             <script>
-              var animateCommandments = true;
+              var animateTopics = false;
               function topicsLoaded(){
-                  if (animateCommandments)
+                  if (animateTopics)
                   {
                       console.log('topicsLoaded')
                      
@@ -282,9 +282,9 @@
                       tl[5] = tl;
                       var bx1 = $('#topic1p #bx1v'); bx2 = $('#topic1p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
               
-                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
                       tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
                       //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
                       //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
@@ -322,6 +322,90 @@
               <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
+            <div id="materialp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Apply Design Guidelines (e.g. Material Design) for beauty and consistency</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="md" src="../100-basics/res/material.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function materialLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="muip">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Use a CSS Framework that supports your design guidelines (e.g. MUI CSS)</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="mui" src="../100-basics/res/mui.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function muiLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#muip #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
             <div id="topic2p">
               <div class="box box-1v box-1--selected" id="bx1v">
                 <div class="box--middle">
@@ -329,7 +413,7 @@
               </div>
               <ul class="step step1">
                 <li class="t--selected" id="a1">Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency</li>
-                <li class="t--selected" id="a2">Use SASS and Preprocessors for clean, maintainable CSS</li>
+                <li class="t--selected" id="a2">Use SASS, BEM and Preprocessors for clean, maintainable CSS</li>
                 <li id="a3">HTML</li>
                 <li id="a4">Performance</li>
               </ul>
@@ -383,6 +467,174 @@
               <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
+            <div id="cssp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">CSS is broken!</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="brokencss" src="../100-basics/res/css.gif">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cssIsBrokenLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="fixedcssp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">SASS/SCSS with Preprocessor fixes CSS!</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="fixedcss" src="../100-basics/res/cssExtend.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cssIsFxiedLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#fixedcssp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="bemp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">We love Block-Element-Modifier (BEM) naming for maintainable CSS.</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="bem" src="../100-basics/res/bem.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function bemLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#bemp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="preprosp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Use a SASS Preprocessor (e.g. Prepros.io, IDE, Gulp, Bower)</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="prepros" src="../100-basics/res/prepros.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function preprosLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#preprosp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
             <div id="topic3p">
               <div class="box box-1v box-1--selected" id="bx1v">
                 <div class="box--middle">
@@ -390,7 +642,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li class="t--selected" id="a2">Use SASS and Preprocessors for clean, maintainable CSS</li>
+                <li class="t--selected" id="a2">Use SASS, BEM and Preprocessors for clean, maintainable CSS</li>
                 <li class="t--selected" id="a3">Use Pug for clean, maintainable HTML</li>
                 <li id="a4">Performance</li>
               </ul>
@@ -445,6 +697,48 @@
               <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
+            <div id="pugp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">We use Pug (Jade) for clean, maintainable HTML; Prepros and Node.js Express support it.</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="pug" src="../100-basics/res/pug.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function pugLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#pugp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
             <div id="topic4p">
               <div class="box box-1v box-1--selected" id="bx1v">
                 <div class="box--middle">
@@ -452,7 +746,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li class="t--selected" id="a3">Use Pug for maintainable HTML</li>
                 <li class="t--selected" id="a4">Go (max) static, deploy to CDN edge cache to scale for performance</li>
               </ul>
@@ -492,6 +786,49 @@
                       $('#topic4p .box').removeClass("mui--z4");
                   }    
               } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/best/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io"><img id="logo--rfid" src="/best/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/best/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="cdnp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">
+                   Only user-specific data is truly dynamic; browser is not.<br>Maximize static content and use a CDN to cache it at the edge. </div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="cdn" src="../100-basics/res/cdn.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cdnLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#cdnp #tbd').css('opacity',0);
+              }
             </script>
           </div>
         </div>
@@ -578,7 +915,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
@@ -650,7 +987,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
@@ -718,11 +1055,11 @@
               </div>
               <div class="box box-2v box-2--selected" id="bx2v">
                 <div class="box--middle">
-                   Step 2:<br>The Bricks and Mortar</div>
+                   The Bricks and Mortar</div>
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
@@ -794,7 +1131,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
               </ul>
@@ -934,7 +1271,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
                 <li id="a5">Use AppShell and page transitions</li>
@@ -1010,7 +1347,7 @@
               </div>
               <ul class="step step1">
                 <li id="a1">Apply Design Guidelines</li>
-                <li id="a2">Use SASS and Preprocessors</li>
+                <li id="a2">Use SASS, BEM and Preprocessors</li>
                 <li id="a3">Use Pug for maintainable HTML</li>
                 <li id="a4">Go max static w/CDN for Perf.</li>
                 <li id="a5">Use AppShell and page transitions</li>
@@ -1085,7 +1422,7 @@
               </div>
               <ul class="step step1">
                 <li class="t--selected" id="a1">Apply Design Guidelines</li>
-                <li class="t--selected" id="a2">Use SASS and Preprocessors</li>
+                <li class="t--selected" id="a2">Use SASS, BEM and Preprocessors</li>
                 <li class="t--selected" id="a3">Use Pug for clean HTML</li>
                 <li class="t--selected" id="a4">Go max static w/CDN for Perf.</li>
               </ul>
@@ -1146,10 +1483,17 @@
       function UIinit() {
           $('#fullpage').fullpage({
               anchors: ['title', 'steps', 'topics'
-                  ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
-                  ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
-                  ,'steps3', 'topic9', 'topic10'
-                  ,'commandments'],
+                  , 'step1', 'topic1', 'material', 'mui' 
+                  , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
+                  , 'topic3', 'pug'
+                  , 'topic4', 'cdn'
+                  , 'steps2', 'topic5'
+                  , 'topic6'
+                  , 'topic7'
+                  , 'topic8'
+                  , 'steps3', 'topic9'
+                  , 'topic10' 
+                  , 'commandments'],
               scrollBar: true,
               /*navigation: true,
               navigationPosition: 'right',
@@ -1163,6 +1507,7 @@
                       case 'topics': topicsLoaded(); return
                       case 'step1': step1Loaded(); return
                       case 'topic1': topic1Loaded(); return
+                      case 'material': materialLoaded(); return
                       case 'topic2': topic2Loaded(); return
                       case 'topic3': topic3Loaded(); return
                       case 'topic4': topic4Loaded(); return

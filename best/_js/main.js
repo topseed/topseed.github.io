@@ -19,14 +19,15 @@ function libsLoaded(){
 	
 	TS.signalAppReady()
 
-	/*TT.ScontentID = '#content-wrapper'
+	TT.ScontentID = "#fullpage"
+	//TT.ScontentID = '#content-wrapper'
 	TT.handle(function(evt) {
 		if (TT.PRE == evt.typ)  {//start
-			//$('#content-wrapper').fadeTo(100,.2)
+			$('#fullpage').fadeTo(100,.2)
 		}
 		if (TT.PAGE == evt.typ)  {//new pg loaded
-			$(TT.ScontentID).html(evt.$new)
-			//$('#content-wrapper').fadeTo(100,1)
+			//$(TT.ScontentID).html(evt.$new)
+			$('#fullpage').fadeTo(100,1)
 		}
-	})*/
+	})
 }

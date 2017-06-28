@@ -40,9 +40,9 @@ script.
             tl[5] = tl;
             var bx1 = $('#topic1p #bx1v'); bx2 = $('#topic1p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
 
-            tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
             tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
             //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
             //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);

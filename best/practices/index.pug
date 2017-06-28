@@ -35,7 +35,37 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../100-basics/material
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/mui
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../100-basics/topic2
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/brokencss
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/fixedcss
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/bem
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/prepros
         .section
             #header
                 .mui--text-center
@@ -45,7 +75,17 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../100-basics/pug
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../100-basics/topic4
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/cdn
         .section
             #header
                 .mui--text-center
@@ -100,10 +140,17 @@ block main
         function UIinit() {
             $('#fullpage').fullpage({
                 anchors: ['title', 'steps', 'topics'
-                    ,'step1', 'topic1', 'topic2', 'topic3', 'topic4'
-                    ,'steps2', 'topic5', 'topic6', 'topic7', 'topic8'
-                    ,'steps3', 'topic9', 'topic10'
-                    ,'commandments'],
+                    , 'step1', 'topic1', 'material', 'mui' 
+                    , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
+                    , 'topic3', 'pug'
+                    , 'topic4', 'cdn'
+                    , 'steps2', 'topic5'
+                    , 'topic6'
+                    , 'topic7'
+                    , 'topic8'
+                    , 'steps3', 'topic9'
+                    , 'topic10' 
+                    , 'commandments'],
                 scrollBar: true,
                 /*navigation: true,
                 navigationPosition: 'right',
@@ -117,6 +164,7 @@ block main
                         case 'topics': topicsLoaded(); return
                         case 'step1': step1Loaded(); return
                         case 'topic1': topic1Loaded(); return
+                        case 'material': materialLoaded(); return
                         case 'topic2': topic2Loaded(); return
                         case 'topic3': topic3Loaded(); return
                         case 'topic4': topic4Loaded(); return
