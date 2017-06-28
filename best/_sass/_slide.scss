@@ -16,15 +16,12 @@
     width:56vw;
     @extend .mui--z1;
 } 
-
-
-
 //images
 
 #whoami {
      @extend .screenshot;
      top: 10vw;
-     left: 30vw;
+     left: 33vw;
      width: 45vw;
      height: 45vw;
 }
@@ -62,6 +59,7 @@
 
 #pugimg {
      @extend .screenshot;
+     top: 20vw;
      left: 16vw;
      width: 67.2vw;
      height: 34.9vw;
