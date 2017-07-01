@@ -214,8 +214,14 @@ block main
                 .mui--text-center
                     include ../_part/_top
                     include ../400-end/commandments 
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../400-end/action 
 
     script.
+        var animate = true;
         TS.onAppReady(UIinit)
         function UIinit() {
             $('#fullpage').fullpage({
@@ -230,7 +236,7 @@ block main
                     , 'topic8',  'callback', 'promise', 'fetch'
                     , 'steps3', 'topic9', 'lego', 'dashboard', 'religion', 'gauge', 'browser'
                     , 'topic10', 'phonegap' 
-                    , 'commandments'],
+                    , 'commandments','action'],
                 scrollBar: true,
                 /*navigation: true,
                 navigationPosition: 'right',

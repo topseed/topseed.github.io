@@ -1,11 +1,11 @@
 #topic9p
     //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
-    #bx1v.box.box-1v.box-1--selected
+    #bx1v.box.box-1v.box-1--selected.mui--z1
         .box--middle 
             //-| Step I:
             //-br
             | The Basics
-    #bx2v.box.box-2v.box-2--selected
+    #bx2v.box.box-2v.box-2--selected.mui--z1
         .box--middle 
             //-| Step II:
             //-br
@@ -25,37 +25,41 @@
         li#a6 Use AMP and please visitors
         li#a7 Be DOM-centric/designer-friendly
         li#a8.t--selected Use PageBusiness, Promises and Fetch for cleaner code
-        li#a9.t--selected Use web components to be LEGO
+        li#a9 Use web components to be LEGO
         li#a10 Mobile Apps        
 
 script.
-    var animatetopic1 = true;
     function topic9Loaded(){
-        if (animatetopic1)
-        {
-            console.log('commandmentsLoaded');
-            var tl = new TimelineMax();
-            tl[5] = tl;
-            var bx1 = $('#topic9p #bx1v'); bx2 = $('#topic9p #bx2v'); bx3 = $('#topic9p #bx3v');                 
+        var bx1 = $('#topic9p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+        var bx2 = $('#topic9p #bx2v')
+        bx2.css('opacity', 1);
+        bx2.css('filter', 'grayscale(0%)');
+        var bx3 = $('#topic9p #bx3v')
 
-            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-            tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
-            tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
-            tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
-            tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
+        var a1 = $('#topic9p #a8');
+        var a2 = $('#topic9p #a9');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a1, 1, {css: {className:'-=t--selected'}}, 1); 
+            tl.to(bx3, 1.5, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+            tl.to(bx3, 1.5, {opacity:100, ease:Power2.easeIn}, 2);
+            tl.from(bx3, 1.5, {scale:.93, ease:Power1.easeIn}, 2);
+            tl.call(function() {bx3.addClass("mui--z2");}, null, null, 2);
+            tl.to(a2, 1.5, {css: {className:'+=t--selected'}, ease:Power2.easeIn}, 3.5); 
             tl.play();
         }
+        else
+        {
+           a1.removeClass("t--selected"); 
+           a2.addClass("t--selected"); 
+        }
     }
-    function page5Setup(animate){
-        animatetopic1 = animate;
-        if (animatetopic1)
+    function topic9Setup(){
+        if (animate)
         {
             $('#topic9p .box').css('opacity',0);
             $('#topic9p .box').css('filter', 'grayscale(100%)');

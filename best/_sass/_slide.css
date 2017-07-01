@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #whoami, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.mui--z1, .screenshot, #whoami, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #whoami, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.screenshot, #whoami, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -28,6 +28,15 @@
   left: 33vw;
   width: 45vw;
   height: 45vw; }
+
+#wolf {
+  top: 11vw;
+  left: 40vw;
+  width: 20vw;
+  height: 20vw; }
+
+#stepsp .box {
+  opacity: 0; }
 
 #md {
   height: 33.6vw; }
@@ -324,19 +333,19 @@
   height: 24vw; }
 
 .box-1v {
-  left: 15vw;
+  left: 14vw;
   top: 11vw;
   width: 24vw;
   height: 14vw; }
 
 .box-2v {
-  left: 15vw;
+  left: 14vw;
   top: 27vw;
   width: 24vw;
   height: 14vw; }
 
 .box-3v {
-  left: 15vw;
+  left: 14vw;
   top: 43vw;
   width: 24vw;
   height: 7vw; }
@@ -349,7 +358,7 @@
   line-height: 1.35em; }
 
 .step1 {
-  left: 42vw;
+  left: 43vw;
   top: 7.5vw; }
 
 .step3 {
@@ -357,7 +366,8 @@
   top: 7.5vw; }
 
 ol {
-  color: #CFD8DC; }
+  color: #CFD8DC;
+  padding-right: 3vw; }
 
 .t--selected {
   color: #212121; }

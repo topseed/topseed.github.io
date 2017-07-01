@@ -1,6 +1,6 @@
 #topic1p
     //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
-    #bx1v.box.box-1v.box-1--selected
+    #bx1v.box.box-1v.box-1--selected.mui--z2
         .box--middle 
             | Step I:
             br
@@ -17,47 +17,40 @@
             | The Perspectives
 
     ol.step.step1
-        li#a1.t--selected Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency
+        li#a1 Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency
         li#a2 CSS
         li#a3 HTML
         li#a4 Performance
-    //-ul.step.step2      
+    //-
         li#a5 SPA/Rich client 'feel'
         li#a6 Time to Glass
         li#a7 HTML vs. JavaScript
         li#a8 Business Logic
-    //-ul.step.step3     
         li#a9 Web Components
         li#a10 Mobile Apps        
 
 script.
-    var animatetopic1 = true;
     function topic1Loaded(){
-        if (animatetopic1)
-        {
-            console.log('commandmentsLoaded');
-            var tl = new TimelineMax();
-            tl[5] = tl;
-            var bx1 = $('#topic1p #bx1v'); bx2 = $('#topic1p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
 
-            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-            //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
-            //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
-            //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
-            //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
-            //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
-            //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
-            //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
-            //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
-            //-tl.play();
+        var bx1 = $('#topic1p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic1p #a1');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a1, 2, {css: {className:'+=t--selected'}}); 
+            tl.play();
+        }
+        else
+        {
+           a1.addClass("t--selected"); 
         }
     }
-    function page5Setup(animate){
-        animatetopic1 = animate;
-        if (animatetopic1)
+    function topic1Setup(){
+       if (animate)
         {
             $('#topicsp .box').css('opacity',0);
             $('#topicsp .box').css('filter', 'grayscale(100%)');

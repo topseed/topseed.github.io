@@ -21,11 +21,9 @@
 
 
 script.
-    var animatePage5 = true;
     function stepsLoaded(){
-        if (animatePage5)
+        if (animate)
         {
-            console.log('stepsLoaded')
             var tl = new TimelineMax();
             tl[5] = tl;
             var bx1 = $('#stepsp #bx1'); bx2 = $('#stepsp #bx2'); bx3 = $('#stepsp #bx3');                 

@@ -1,6 +1,6 @@
 #topic3p
     //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
-    #bx1v.box.box-1v.box-1--selected
+    #bx1v.box.box-1v.box-1--selected.mui--z2
         .box--middle 
             //-| Step I:
             //-br
@@ -19,7 +19,7 @@
     ol.step.step1
         li#a1 Apply Design Guidelines
         li#a2.t--selected Use SASS, BEM, Preprocessors for clean, maintainable CSS
-        li#a3.t--selected Use Pug for clean, maintainable HTML
+        li#a3 Use Pug for clean, maintainable HTML
         li#a4 Performance
     //-ul.step.step2      
         li#a5 SPA/Rich client 'feel'
@@ -31,33 +31,29 @@
         li#a10 Mobile Apps        
 
 script.
-    var animatetopic1 = true;
     function topic3Loaded(){
-        if (animatetopic1)
-        {
-            console.log('commandmentsLoaded');
-            var tl = new TimelineMax();
-            tl[5] = tl;
-            var bx1 = $('#topic3p #bx1v'); bx2 = $('#topic3p #bx2v'); //-bx3 = $('#topic1p #bx3v');                 
 
-            tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-            //-tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
-            //-tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
-            //-tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
-            //-tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
-            //-tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
-            //-tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
-            //-tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
-            //-tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
-            //-tl.play();
+        var bx1 = $('#topic3p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic3p #a2');
+        var a2 = $('#topic3p #a3');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+            tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+            tl.play();
+        }
+        else
+        {
+           a2.addClass("t--selected"); 
         }
     }
-    function page5Setup(animate){
-        animatetopic1 = animate;
-        if (animatetopic1)
+    function topic3Setup(){
+        if (animate)
         {
             $('#topic3p .box').css('opacity',0);
             $('#topic3p .box').css('filter', 'grayscale(100%)');

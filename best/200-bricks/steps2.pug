@@ -1,6 +1,6 @@
 #steps2p
     //.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
-    #bx1.box.box-1.box-1--selected
+    #bx1.box.box-1.box-1--selected.mui--z4
         .box--middle 
             | Step I:
             br
@@ -21,32 +21,27 @@
 
 
 script.
-    var animatePage5 = true;
     function steps2Loaded(){
-        if (animatePage5)
+        var bx1 = $('#steps2p #bx1'); bx2 = $('#steps2p #bx2'); 
+        bx1.css('opacity',1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        if (animate)
         {
             var tl = new TimelineMax();
-            tl[5] = tl;
-            var bx1 = $('#steps2p #bx1'); bx2 = $('#steps2p #bx2'); //bx3 = $('#steps2p #bx3');                 
-
-            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
             tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
             tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 1);
             tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 1);
             tl.call(function() {bx2.addClass("mui--z4");}, null, null, 1);
-            //tl.to(bx3, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 8);
-           // tl.to(bx3, 3, {opacity:100, ease:Power1.easeIn}, 8);
-            //tl.from(bx3, 3, {scale:.93, ease:Power1.easeIn}, 8);
-            //tl.call(function() {bx3.addClass("mui--z4");}, null, null, 8);
             tl.play();
         }
+        else
+        {
+            bx2.addClass("mui--z4")
+        }
     }
-    function page5Setup(animate){
-        animatePage5 = animate;
-        if (animatePage5)
+    function steps2Setup(){
+        if (animate)
         {
             $('#steps2p .box').css('opacity',0);
             $('#steps2p .box').css('filter', 'grayscale(100%)');
