@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Standard Web Components</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/topseed/topseed-turbo/master/vendor/loadjs.min.js"></script>
+    <script src="https://cdn.rawgit.com/topseed/topseed-turbo/master/setup/setup-4.2.js"></script>
+    <script src="../_js/main.js" async=""></script>
+  </head>
+  <body style="margin:0;">
+    <link rel="stylesheet" href="../_sass/_slide.css" lazyload="1">
+    <div id="fullpage">
+      <div class="section active">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div><img class="mui--z3" id="globe" style="top:16vw;" src="/web/master/res/globe.jpg">
+            <div class="mui--z2" id="bicolorbar1" style="top:27.5vw;"></div>
+            <div id="bicolorbar2" style="top:27.2vw;"></div>
+            <div class="headline" id="sem" style="top:35vw;">Standard Web Components</div>
+            <div class="headline headline__sub" id="sub" style="top:40.5vw;"> - How to create stunning HTML elements -</div>
+            <div class="headline headline__sub" id="sub" style="top:44vw;">Wolfgang Gehner @ JavaScriptLA, Aug 22, 2017</div>
+            <div class="headline headline__sub2" id="sub2" style="top:51vw;">- Press [F11] to toggle full screen, [PgDn] for navigation -</div>
+            <script>
+              function titleLoaded(){
+                  if (!animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl[1] = tl;
+                      tl.from($('#sem'), 3, {x:-2000, ease:Bounce.easeOut}, '+=1');
+                      tl.to($('#globe'), 3, {opacity:100, rotationY:360, transformOrigin:"right 50% -200"});
+                      tl.from($('#sub'), 2, {x:-2000, ease:Power4.easeOut}, '+=0');
+                      tl.from($('#sub2'), 2, {y:2000, ease:Power2.easeOut}, '+=0');
+                      tl.from($('#bicolorbar2'), 1, {x:-2000, ease:Power4.easeOut}, '+=2');
+                      tl.from($('#bicolorbar1'), 1, {x:-2000, ease:Power4.easeOut}, '+=0');
+                      tl.play();
+                  }
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="whop"><img id="whoami" src="../001-intro/res/struts.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="stepsp">
+              <div class="headline" style="top:11.5vw;">Goal: Create maintainable, future-safe apps fast</div>
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <div class="box box-2 box-2--selected" id="bx2"> 
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3 box-3--selected" id="bx3"> 
+                <div class="box--middle">
+                   Step III:<br>The Perspectives</div>
+              </div>
+            </div>
+            <script>
+              function stepsLoaded(){
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#stepsp #bx1'); bx2 = $('#stepsp #bx2'); bx3 = $('#stepsp #bx3');                 
+              
+                      tl.to(bx1, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 2, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 2, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 3);
+                      tl.to(bx2, 2, {opacity:100, ease:Power2.easeIn}, 3);
+                      tl.from(bx2, 2, {scale:.93, ease:Power1.easeIn}, 3);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 3);
+                      tl.to(bx3, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 6);
+                      tl.to(bx3, 2, {opacity:100, ease:Power1.easeIn}, 6);
+                      tl.from(bx3, 2, {scale:.93, ease:Power1.easeIn}, 6);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 6);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#stepsp .box').css('opacity',0);
+                      $('#stepsp .box').css('filter', 'grayscale(100%)');
+                      $('#stepsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#stepsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topicsp">
+              <!--.headline.headline__sub(style='top:11.5vw') Goal: efficiently create maintainable, future-safe apps-->
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected" id="bx3v">
+                <div class="box--middle">
+                   Step III:<br>The Perspectives</div>
+              </div>
+              <ol class="step step1">
+                <li class="t--selected" id="a1">HTML Templates</li>
+                <li class="t--selected" id="a2">HTML Imports</li>
+                <li class="t--selected" id="a3">Custom Elements</li>
+                <li class="t--selected" id="a4">Shadow DOM</li>
+                <li class="t--selected" id="a5">Lifecycle</li>
+                <li class="t--selected" id="a6">Loading/AppShell</li>
+                <li class="t--selected" id="a7">Business Logic</li>
+                <li class="t--selected" id="a8">Styling/CSS</li>
+                <li class="t--selected" id="a9">Polymer</li>
+                <li class="t--selected" id="a10">SSR</li>
+              </ol>
+            </div>
+            <script>
+              var animateTopics = false;
+              function topicsLoaded(){
+                  if (animateTopics)
+                  {
+                      console.log('topicsLoaded')
+                     
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#topicsp #bx1v'); bx2 = $('#topicsp #bx2v'); bx3 = $('#topicsp #bx3v');                 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+                      tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+                      tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#topicsp .box').css('opacity',0);
+                      $('#topicsp .box').css('filter', 'grayscale(100%)');
+                      $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topicsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="pugp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Side note: We use Pug (Jade) for clean, maintainable HTML; Prepros and Node.js Express support it.</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="pugimg" src="../100-basics/res/pug.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function pugLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#pugp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="step1p">
+              <div class="headline" style="top:11.5vw;">Goal: Create maintainable, future-safe apps fast</div>
+              <div class="box box-1 box-1--selected" id="bx1">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function step1Loaded(){
+                  if (animatePage5)
+                  {
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#step1p #bx1'); 
+              
+                      tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animatePage5 = animate;
+                  if (animatePage5)
+                  {
+                      $('#step1p .box').css('opacity',0);
+                      $('#step1p .box').css('filter', 'grayscale(100%)');
+                      $('#step1p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#step1p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="legop">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">Web components must be like LEGO&trade;: Composable, reusable and modular. In addition, they must be able to communicate!</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="legos" src="../300-perspectives/res/lego.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function legoLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#lego #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="dashboardp">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">Web components need to be insulated to avoid CSS bleed. Shadow DOM is coming to the rescue. Loose coupling is vital in communication.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="dash" src="../300-perspectives/res/dashboard.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function legoLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#dashboardp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="religionp">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">What's considered 'the best' changes every 18 months. 'Design for change' to be future-safe.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="relig" src="../300-perspectives/res/comparison.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function browserLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#religionp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="javascriptp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">We prefer HTML and Document-Object Model (DOM) over JavaScript wherever possible. More designer-friendly and maintainable than this: </div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="javascr" src="../200-bricks/res/react.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function javascriptLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#domp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="domp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">We prefer HTML and Document-Object Model (DOM) over JavaScript wherever possible. Like this: </div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="domimg" src="../200-bricks/res/business.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function domLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#domp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic1p">
+              <div class="box box-1v box-1--selected mui--z2" id="bx1v">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates to declare content and style</li>
+                <li id="a2">HTML Imports</li>
+                <li id="a3">Custom Elements</li>
+                <li id="a4">Shadow DOM</li>
+              </ol>
+            </div>
+            <script>
+              function topic1Loaded(){
+              
+                  var bx1 = $('#topic1p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic1p #a1');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a1, 2, {css: {className:'+=t--selected'}}); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a1.addClass("t--selected"); 
+                  }
+              }
+              function topic1Setup(){
+                 if (animate)
+                  {
+                      $('#topicsp .box').css('opacity',0);
+                      $('#topicsp .box').css('filter', 'grayscale(100%)');
+                      $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topicsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="materialp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Apply Design Guidelines (e.g. Material Design) for beauty and consistency</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="md" src="../100-basics/res/material.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function materialLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="muip">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Use a CSS Framework that supports your design guidelines (e.g. MUI CSS)</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="muiimg" src="../100-basics/res/mui.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function muiLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#muip #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic2p">
+              <div class="box box-1v box-1--selected mui--z2" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <ol class="step step1">
+                <li class="t--selected" id="a1">Use HTML Templates to declare content and style</li>
+                <li id="a2">Use HTML Imports for loading and late-loading</li>
+                <li id="a3">Custom Elements</li>
+                <li id="a4">Shadow DOM</li>
+              </ol>
+            </div>
+            <script>
+              function topic2Loaded(){
+              
+                  var bx1 = $('#topic2p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic2p #a1');
+                  var a2 = $('#topic2p #a2');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function topic2Setup(){
+                  if (animate)
+                  {
+                      $('#topic2p .box').css('opacity',0);
+                      $('#topic2p .box').css('filter', 'grayscale(100%)');
+                      $('#topic2p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic2p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="cssp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">CSS is broken!</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="brokencssimg" src="../100-basics/res/css.gif">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cssIsBrokenLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="fixedcssp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">SASS/SCSS with Preprocessor fixes CSS!</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="fixedcssimg" src="../100-basics/res/cssExtend.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cssIsFxiedLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#fixedcssp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="bemp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">We love Block-Element-Modifier (BEM) Naming for maintainable CSS.</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="bemimg" src="../100-basics/res/bem.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function bemLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#bemp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="preprosp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Use a SASS Preprocessor (e.g. Prepros.io, IDE, bower?)</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="preprosimg" src="../100-basics/res/prepros.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function preprosLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#preprosp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic3p">
+              <div class="box box-1v box-1--selected mui--z2" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates</li>
+                <li class="t--selected" id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Shadow DOM</li>
+              </ol>
+            </div>
+            <script>
+              function topic3Loaded(){
+              
+                  var bx1 = $('#topic3p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic3p #a2');
+                  var a2 = $('#topic3p #a3');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function topic3Setup(){
+                  if (animate)
+                  {
+                      $('#topic3p .box').css('opacity',0);
+                      $('#topic3p .box').css('filter', 'grayscale(100%)');
+                      $('#topic3p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic3p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic4p">
+              <div class="box box-1v box-1--selected mui--z2" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li class="t--selected" id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM to avoid CSS bleeding</li>
+              </ol>
+            </div>
+            <script>
+              function topic4Loaded(){
+              
+                  var bx1 = $('#topic4p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic4p #a3');
+                  var a2 = $('#topic4p #a4');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function topic4Setup(){
+                  if (animate)
+                  {
+                      $('#topic4p .box').css('opacity',0);
+                      $('#topic4p .box').css('filter', 'grayscale(100%)');
+                      $('#topic4p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic4p .box').removeClass("mui--z1");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="cdnp">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">
+                   Only user-specific data is truly dynamic; which browser he uses is not.<br>Maximize static content and use a CDN to cache it at the edge for speed. </div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Basics</div><img id="cdnimg" src="../100-basics/res/cdn.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function cdnLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#cdnp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="steps2p">
+              <div class="headline" style="top:11.5vw;">Goal: Create maintainable, future-safe apps fast</div>
+              <div class="box box-1 box-1--selected mui--z4" id="bx1">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <div class="box box-2 box-2--selected" id="bx2"> 
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+            </div>
+            <script>
+              function steps2Loaded(){
+                  var bx1 = $('#steps2p #bx1'); bx2 = $('#steps2p #bx2'); 
+                  bx1.css('opacity',1);
+                  bx1.css('filter', 'grayscale(0%)');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
+                      tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 1);
+                      tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 1);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 1);
+                      tl.play();
+                  }
+                  else
+                  {
+                      bx2.addClass("mui--z4")
+                  }
+              }
+              function steps2Setup(){
+                  if (animate)
+                  {
+                      $('#steps2p .box').css('opacity',0);
+                      $('#steps2p .box').css('filter', 'grayscale(100%)');
+                      $('#steps2p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#steps2p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic5p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li class="t--selected" id="a4">Use Shadow DOM to avoid CSS bleeding</li>
+                <li id="a5">Lifecycle</li>
+                <li id="a6">Loading/AppShell</li>
+                <li id="a7">Business Logic</li>
+                <li id="a8">Styling/CSS</li>
+              </ol>
+            </div>
+            <script>
+              function topic5Loaded(){
+              
+                  var bx1 = $('#topic5p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic5p #bx2v')
+                  //bx2.css('opacity', 1);
+                  //bx2.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic5p #a4');
+                  var a2 = $('#topic5p #a5');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a1, 1, {css: {className:'-=t--selected'}}, 1); 
+                      tl.to(bx2, 1.5, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      tl.to(bx2, 1.5, {opacity:100, ease:Power2.easeIn}, 2);
+                      tl.from(bx2, 1.5, {scale:.93, ease:Power1.easeIn}, 2);
+                      tl.call(function() {bx2.addClass("mui--z2");}, null, null, 2);
+                      tl.to(a2, 1.5, {css: {className:'+=t--selected'}, ease:Power2.easeIn}, 3.5); 
+              
+                      tl.play();
+                  }
+                  else
+                  {
+                     a1.removeClass("t--selected"); 
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function topic5Setup(){
+                  if (animate)
+                  {
+                      $('#topic5p .box').css('opacity',0);
+                      $('#topic5p .box').css('filter', 'grayscale(100%)');
+                      $('#topic5p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic5p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="appshellp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">Only replace content in AppShell; it creates a 'Rich client feel' and improves perceived performance. We use topseed-turbo (github), ex smoothState.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="appshellimg" src="../200-bricks/res/appshell.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function appshellLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#appshellp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="transp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">Use page transitions (e.g. jQuery fadeTo) with AppShell. Flipbook is a great example.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="transimg" src="../200-bricks/res/fade.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function transLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#transp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic6p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected mui--z2" id="bx2v">
+                <div class="box--middle">
+                   The Bricks and Mortar</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM</li>
+                <li class="t--selected" id="a5">Know the Component Lifecycle</li>
+                <li id="a6">Loading/AppShell</li>
+                <li id="a7">Business Logic</li>
+                <li id="a8">Styling/CSS</li>
+              </ol>
+            </div>
+            <script>
+              function topic6Loaded(){
+                  var bx1 = $('#topic6p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic6p #bx2v')
+                  bx2.css('opacity', 1);
+                  bx2.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic6p #a5');
+                  var a2 = $('#topic6p #a6');
+              
+                  if (animate) {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+              }
+              function topic6Setup(){
+                  if (animate)
+                  {
+                      $('#topic6p .box').css('opacity',0);
+                      $('#topic6p .box').css('filter', 'grayscale(100%)');
+                      $('#topic6p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic6p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="ampp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">Use Accelerated Mobile Pages (AMP) to speed up page load/time to glass with early completion. At least for user's first page!</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="ampimg" src="../200-bricks/res/ampintro.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function ampLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#ampp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="ampsourcep">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">AMP pages are HTML with an AMP JavaScript and some custom tags. We mostly use amp-img and amp-iframe. </div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="ampsrc" src="../200-bricks/res/ampsource.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function ampLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#ampsourcep #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic7p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected mui--z2" id="bx2v">
+                <div class="box--middle">
+                   The Bricks and Mortar</div>
+              </div>
+              <ol class="step step1">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM</li>
+                <li id="a5">Know the Component Lifecycle</li>
+                <li class="t--selected" id="a6">Late-load and use AppShell</li>
+                <li id="a7">Business Logic</li>
+                <li id="a8">Styling/CSS</li>
+              </ol>
+            </div>
+            <script>
+              function topic7Loaded(){
+                  var bx1 = $('#topic7p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic7p #bx2v')
+                  bx2.css('opacity', 1);
+                  bx2.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic7p #a6');
+                  var a2 = $('#topic7p #a7');
+              
+                  if (animate) {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+              }
+              function topic7Setup(){
+                  if (animate)
+                  {
+                      $('#topic7p .box').css('opacity',0);
+                      $('#topic7p .box').css('filter', 'grayscale(100%)');
+                      $('#topic7p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic7p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic8p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected mui--z2" id="bx2v">
+                <div class="box--middle">
+                   The Bricks and Mortar</div>
+              </div>
+              <ol class="step step3">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM</li>
+                <li id="a5">Know the Component Lifecycle</li>
+                <li id="a6">Late-load and use AppShell</li>
+                <li class="t--selected" id="a7">Keep Business Logic outside</li>
+                <li id="a8">Styling/CSS</li>
+              </ol>
+            </div>
+            <script>
+              function topic8Loaded(){
+                  var bx1 = $('#topic8p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic8p #bx2v')
+                  bx2.css('opacity', 1);
+                  bx2.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic8p #a7');
+                  var a2 = $('#topic8p #a8');
+              
+                  if (animate) {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+              }
+              function topic8Setup(){
+                  if (animate)
+                  {
+                      $('#topic8p .box').css('opacity',0);
+                      $('#topic8p .box').css('filter', 'grayscale(100%)');
+                      $('#topic8p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic8p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="callbackep">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">Have you encountered 'Callback Hell'?</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="callb" src="../200-bricks/res/callback.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function callbackLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#callbackp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="promisep">
+              <div class="topicbox topicbox-2 mui--z4">
+                <div class="topicbox--middle">Use JavaScript Promises. They get you out of Callback Hell!</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="promiseimg" src="../200-bricks/res/promise.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              function promisemLoaded(){
+              }
+              function page4Setup(animate){
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="fetchp">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">Use JavaScript Fetch to replace Ajax/XMLHttpRequest for asynchronous requests. It uses Promises!</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="fetchi" src="../200-bricks/res/fetch.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function fetchLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#fetchp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="steps3p">
+              <div class="headline" style="top:11.5vw;">Goal: Create maintainable, future-safe apps fast</div>
+              <div class="box box-1 box-1--selected mui--z3" id="bx1">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <div class="box box-2 box-2--selected mui--z3" id="bx2"> 
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3 box-3--selected" id="bx3"> 
+                <div class="box--middle">
+                   Step III:<br>The Perspectives</div>
+              </div>
+            </div>
+            <script>
+              var animatePage5 = true;
+              function steps3Loaded(){
+                  var bx1 = $('#steps3p #bx1'); bx2 = $('#steps3p #bx2'); bx3 = $('#steps3p #bx3'); 
+                  bx1.css('opacity',1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  bx2.css('opacity',1);
+                  bx2.css('filter', 'grayscale(0%)');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(bx3, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
+                      tl.to(bx3, 3, {opacity:100, ease:Power2.easeIn}, 1);
+                      tl.from(bx3, 3, {scale:.93, ease:Power1.easeIn}, 1);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 1);
+                      tl.play();
+                  }
+                  else
+                  {
+                      bx3.addClass("mui--z4")
+                  }
+              }
+              function steps3Setup(){
+                  if (animate)
+                  {
+                      $('#steps3p .box').css('opacity',0);
+                      $('#steps3p .box').css('filter', 'grayscale(100%)');
+                      $('#steps3p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#steps3p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic9p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected mui--z1" id="bx2v">
+                <div class="box--middle">
+                   The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected" id="bx3v">
+                <div class="box--middle">
+                   Step III:<br>The Perspectives</div>
+              </div>
+              <ol class="step step3">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM</li>
+                <li id="a5">Know the Component Lifecycle</li>
+                <li id="a6">Late-load and use AppShell</li>
+                <li id="a7">Keep Business Logic outside</li>
+                <li class="t--selected" id="a8">Style with CSS Variables</li>
+                <li id="a9">Evaluate Polymer</li>
+                <li id="a10">SSR</li>
+              </ol>
+            </div>
+            <script>
+              function topic9Loaded(){
+                  var bx1 = $('#topic9p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic9p #bx2v')
+                  bx2.css('opacity', 1);
+                  bx2.css('filter', 'grayscale(0%)');
+                  var bx3 = $('#topic9p #bx3v')
+              
+                  var a1 = $('#topic9p #a8');
+                  var a2 = $('#topic9p #a9');
+              
+                  if (animate)
+                  {
+                      var tl = new TimelineMax();
+                      tl.to(a1, 1, {css: {className:'-=t--selected'}}, 1); 
+                      tl.to(bx3, 1.5, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      tl.to(bx3, 1.5, {opacity:100, ease:Power2.easeIn}, 2);
+                      tl.from(bx3, 1.5, {scale:.93, ease:Power1.easeIn}, 2);
+                      tl.call(function() {bx3.addClass("mui--z2");}, null, null, 2);
+                      tl.to(a2, 1.5, {css: {className:'+=t--selected'}, ease:Power2.easeIn}, 3.5); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a1.removeClass("t--selected"); 
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function topic9Setup(){
+                  if (animate)
+                  {
+                      $('#topic9p .box').css('opacity',0);
+                      $('#topic9p .box').css('filter', 'grayscale(100%)');
+                      $('#topic9p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic9p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="gaugep">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">A standard is finally emerging: Standard Web Components (Polymer is already built on top of it). It's DOM-centric:</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="agauge" src="../300-perspectives/res/gauge.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function gaugeLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#gaugep #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="browserp">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">Browser Support for Standard Web Components is building. We just made it work for IE.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="brows" src="../300-perspectives/res/browser.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function browserLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#browserp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="topic10p">
+              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
+                <div class="box--middle">
+                   The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected mui--z1" id="bx2v">
+                <div class="box--middle">
+                   The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected mui--z2" id="bx3v">
+                <div class="box--middle">
+                   The Perspectives</div>
+              </div>
+              <ol class="step step3">
+                <li id="a1">Use HTML Templates</li>
+                <li id="a2">Use HTML Imports</li>
+                <li id="a3">Don't use Custom Elements (yet)</li>
+                <li id="a4">Use Shadow DOM</li>
+                <li id="a5">Know the Component Lifecycle</li>
+                <li id="a6">Late-load and use AppShell</li>
+                <li id="a7">Keep Business Logic outside</li>
+                <li id="a8">Style with CSS Variables</li>
+                <li class="t--selected" id="a9">Evaluate Polymer</li>
+                <li id="a10">Consider SSR</li>
+              </ol>
+            </div>
+            <script>
+              var animatetopic1 = true;
+              function topic10Loaded(){
+                  var bx1 = $('#topic10p #bx1v')
+                  bx1.css('opacity', 1);
+                  bx1.css('filter', 'grayscale(0%)');
+                  var bx2 = $('#topic10p #bx2v')
+                  bx2.css('opacity', 1);
+                  bx2.css('filter', 'grayscale(0%)');
+                  var bx3 = $('#topic10p #bx3v')
+                  bx3.css('opacity', 1);
+                  bx3.css('filter', 'grayscale(0%)');
+              
+                  var a1 = $('#topic10p #a9');
+                  var a2 = $('#topic10p #a10');
+              
+                  if (animate) {
+                      var tl = new TimelineMax();
+                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+                      tl.play();
+                  }
+                  else
+                  {
+                     a1.removeClass("t--selected"); 
+                     a2.addClass("t--selected"); 
+                  }
+              }
+              function page5Setup(animate){
+                  animatetopic1 = animate;
+                  if (animatetopic1)
+                  {
+                      $('#topic10p .box').css('opacity',0);
+                      $('#topic10p .box').css('filter', 'grayscale(100%)');
+                      $('#topic10p .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#topic10p .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="phonegapp">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">Use Phonegap/in-app browser with AppShell for rich client feel and efficiency</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-3--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Perspectives</div><img id="phoneg" src="../300-perspectives/res/phonegap.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function phonegapLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#phonegapp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="commandmentsp">
+              <div class="box box-1v box-1--selected" id="bx1v">
+                <div class="box--middle">
+                   Step I:<br>The Foundation</div>
+              </div>
+              <div class="box box-2v box-2--selected" id="bx2v">
+                <div class="box--middle">
+                   Step II:<br>The Bricks and Mortar</div>
+              </div>
+              <div class="box box-3v box-3--selected" id="bx3v">
+                <div class="box--middle">
+                   Step III:<br>The Perspectives</div>
+              </div>
+              <ol class="step step3">
+                <li id="a1t--selected">Use HTML Templates</li>
+                <li id="a2t--selected">Use HTML Imports</li>
+                <li id="a3t--selected">Don't use Custom Elements (yet)</li>
+                <li id="a4t--selected">Use Shadow DOM</li>
+                <li id="a5t--selected">Know the Component Lifecycle</li>
+                <li id="a6t--selected">Late-load and use AppShell</li>
+                <li id="a7t--selected">Keep Business Logic outside</li>
+                <li id="a8t--selected">Style with CSS Variables</li>
+                <li class="t--selected" id="a9">Evaluate Polymer</li>
+                <li id="a10t--selected">Consider SSR</li>
+              </ol>
+            </div>
+            <script>
+              var animateCommandments = true;
+              function commandmentsLoaded(){
+                  if (animateCommandments)
+                  {
+                      console.log('topicsLoaded')
+                     
+                      var tl = new TimelineMax();
+                      tl[5] = tl;
+                      var bx1 = $('#commandmentsp #bx1v'); bx2 = $('#commandmentsp #bx2v'); bx3 = $('#commandmentsp #bx3v');                 
+              
+                      tl.to(bx1, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+                      tl.to(bx1, 1, {opacity:100, ease:Power1.easeIn}, 0);
+                      tl.from(bx1, 1, {scale:.93, ease:Power1.easeIn}, 0);
+                      tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+                      tl.to(bx2, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+                      tl.to(bx2, 1, {opacity:100, ease:Power2.easeIn}, 2);
+                      tl.from(bx2, 1, {scale:.93, ease:Power1.easeIn}, 2);
+                      tl.call(function() {bx2.addClass("mui--z4");}, null, null, 2);
+                      tl.to(bx3, 1, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 4);
+                      tl.to(bx3, 1, {opacity:100, ease:Power1.easeIn}, 4);
+                      tl.from(bx3, 1, {scale:.93, ease:Power1.easeIn}, 4);
+                      tl.call(function() {bx3.addClass("mui--z4");}, null, null, 4);
+                      tl.play();
+                  }
+              }
+              function page5Setup(animate){
+                  animateCommandments = animate;
+                  if (animateCommandments)
+                  {
+                      $('#commandmentsp .box').css('opacity',0);
+                      $('#commandmentsp .box').css('filter', 'grayscale(100%)');
+                      $('#commandmentsp .box').css('-webkit-filter', 'grayscale(100%)');
+                      $('#commandmentsp .box').removeClass("mui--z4");
+                  }    
+              } 
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="actionp"><img id="wolf" src="../400-end/res/wolf.jpg">
+              <div class="headline headline__sub" id="sub" style="top:33.5vw;">If you liked this and can use help, hire me!</div>
+              <div class="headline headline__sub2" id="sub2" style="top:39vw;">
+                 Email: <a href="https://m.appthings.io/en/contact/" target="_blank">hi@appthings.io</a></div>
+              <div class="headline headline__sub2" id="sub2" style="top:42.5vw;">
+                 Call: (951) 897-4008</div>
+              <div class="headline headline__sub2" id="sub2" style="top:45.8vw;"> <a href="http://appthings.io" target="_blank">http://appthings.io</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var animate = true;
+      TS.onAppReady(UIinit)
+      
+      function UIinit() {
+      
+          $('#fullpage').fullpage({
+              anchors: ['title', 'who', 'steps', 'topics', 'pug'
+                  , 'step1', 'lego', 'dashboard', 'religion', 'javascript', 'topic1', 'material', 'mui' 
+                  , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
+                  , 'topic3' 
+                  , 'topic4', 'cdn'
+                  , 'steps2', 'topic5', 'appshell', 'trans' 
+                  , 'topic6', 'amp', 'ampsource'
+                  , 'topic7', 'dom'
+                  , 'topic8',  'callback', 'promise', 'fetch'
+                  , 'steps3', 'topic9', 'gauge', 'browser'
+                  , 'topic10', 'phonegap' 
+                  , 'commandments','action'],
+              scrollBar: true,
+              /*navigation: true,
+              navigationPosition: 'right',
+              navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5'],*/
+              afterLoad: function(anchorLink, index){
+                  console.log('anchorLink'+anchorLink)
+                  switch (anchorLink)
+                  {
+                       case 'title': titleLoaded(); return
+                      case 'steps': stepsLoaded(); return
+                      case 'topics': topicsLoaded(); return
+                      case 'step1': step1Loaded(); return
+                      case 'topic1': topic1Loaded(); return
+                      case 'material': materialLoaded(); return
+                      case 'topic2': topic2Loaded(); return
+                      case 'topic3': topic3Loaded(); return
+                      case 'topic4': topic4Loaded(); return
+                      case 'steps2': steps2Loaded(); return
+                      case 'topic5': topic5Loaded(); return
+                      case 'topic6': topic6Loaded(); return
+                      case 'topic7': topic7Loaded(); return
+                      case 'topic8': topic8Loaded(); return
+                      case 'steps3': steps3Loaded(); return 
+                      case 'topic9': topic9Loaded(); return
+                      case 'topic10': topic10Loaded(); return
+                      case 'commandments': commandmentsLoaded(); return
+      
+                      //default: titleLoaded(); return
+                  }
+              },
+              onLeave: function(index, nextIndex, direction){
+                  
+                  //tl[index].pause();
+                  switch (nextIndex)
+                  {
+                      //case 1: page1Setup(nextIndex>index); return true
+                      //case 2: page2Setup(nextIndex>index); true
+                      //case 3: page3Setup(nextIndex>index); true
+                      //case 4: page5Setup(nextIndex>index); return true
+                      //case 5: page5Setup(nextIndex>index); return true
+                  }
+              }
+          });
+      }
+      
+    </script>
+  </body>
+</html>

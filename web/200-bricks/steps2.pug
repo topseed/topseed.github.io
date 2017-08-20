@@ -1,0 +1,51 @@
+#steps2p
+    .headline(style='top:11.5vw') Goal: Create maintainable, future-safe apps fast
+    #bx1.box.box-1.box-1--selected.mui--z4
+        .box--middle 
+            | Step I:
+            br
+            | The Foundation
+    #bx2.box.box-2.box-2--selected 
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    //-#bx3.box.box-3.box-3--selected 
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+
+
+
+
+script.
+    function steps2Loaded(){
+        var bx1 = $('#steps2p #bx1'); bx2 = $('#steps2p #bx2'); 
+        bx1.css('opacity',1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(bx2, 3, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 1);
+            tl.to(bx2, 3, {opacity:100, ease:Power2.easeIn}, 1);
+            tl.from(bx2, 3, {scale:.93, ease:Power1.easeIn}, 1);
+            tl.call(function() {bx2.addClass("mui--z4");}, null, null, 1);
+            tl.play();
+        }
+        else
+        {
+            bx2.addClass("mui--z4")
+        }
+    }
+    function steps2Setup(){
+        if (animate)
+        {
+            $('#steps2p .box').css('opacity',0);
+            $('#steps2p .box').css('filter', 'grayscale(100%)');
+            $('#steps2p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#steps2p .box').removeClass("mui--z4");
+        }    
+    } 

@@ -1,0 +1,66 @@
+#topicsp
+    //.headline.headline__sub(style='top:11.5vw') Goal: efficiently create maintainable, future-safe apps
+    #bx1v.box.box-1v.box-1--selected
+        .box--middle 
+            | Step I:
+            br
+            | The Foundation
+    #bx2v.box.box-2v.box-2--selected
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    #bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step1
+        li#a1.t--selected HTML Templates
+        li#a2.t--selected HTML Imports
+        li#a3.t--selected Custom Elements
+        li#a4.t--selected Shadow DOM
+        li#a5.t--selected Lifecycle
+        li#a6.t--selected Loading/AppShell
+        li#a7.t--selected Business Logic
+        li#a8.t--selected Styling/CSS
+        li#a9.t--selected Polymer
+        li#a10.t--selected SSR
+
+script.
+    var animateTopics = false;
+    function topicsLoaded(){
+        if (animateTopics)
+        {
+            console.log('topicsLoaded')
+           
+            var tl = new TimelineMax();
+            tl[5] = tl;
+            var bx1 = $('#topicsp #bx1v'); bx2 = $('#topicsp #bx2v'); bx3 = $('#topicsp #bx3v');                 
+
+            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+            tl.to(bx2, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+            tl.to(bx2, 0, {opacity:100, ease:Power2.easeIn}, 0);
+            tl.from(bx2, 0, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.call(function() {bx2.addClass("mui--z4");}, null, null, 0);
+            tl.to(bx3, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 0);
+            tl.to(bx3, 0, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx3, 0, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.call(function() {bx3.addClass("mui--z4");}, null, null, 0);
+            tl.play();
+        }
+    }
+    function page5Setup(animate){
+        animatePage5 = animate;
+        if (animatePage5)
+        {
+            $('#topicsp .box').css('opacity',0);
+            $('#topicsp .box').css('filter', 'grayscale(100%)');
+            $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topicsp .box').removeClass("mui--z4");
+        }    
+    } 

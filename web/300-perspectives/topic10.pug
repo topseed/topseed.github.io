@@ -1,0 +1,68 @@
+#topic10p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z1
+        .box--middle 
+            //-| Step I:
+            //-br
+            | The Foundation
+    #bx2v.box.box-2v.box-2--selected.mui--z1
+        .box--middle 
+            //-| Step II:
+            //-br
+            | The Bricks and Mortar
+    #bx3v.box.box-3v.box-3--selected.mui--z2
+        .box--middle 
+            //-| Step III:
+            //-br
+            | The Perspectives
+
+    ol.step.step3
+        li#a1 Use HTML Templates
+        li#a2 Use HTML Imports
+        li#a3 Don't use Custom Elements (yet)
+        li#a4 Use Shadow DOM
+        li#a5 Know the Component Lifecycle
+        li#a6 Late-load and use AppShell
+        li#a7 Keep Business Logic outside
+        li#a8 Style with CSS Variables
+        li#a9.t--selected Evaluate Polymer
+        li#a10 Consider SSR
+
+script.
+    var animatetopic1 = true;
+    function topic10Loaded(){
+        var bx1 = $('#topic10p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+        var bx2 = $('#topic10p #bx2v')
+        bx2.css('opacity', 1);
+        bx2.css('filter', 'grayscale(0%)');
+        var bx3 = $('#topic10p #bx3v')
+        bx3.css('opacity', 1);
+        bx3.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic10p #a9');
+        var a2 = $('#topic10p #a10');
+
+        if (animate) {
+            var tl = new TimelineMax();
+            tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+            tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+            tl.play();
+        }
+        else
+        {
+           a1.removeClass("t--selected"); 
+           a2.addClass("t--selected"); 
+        }
+    }
+    function page5Setup(animate){
+        animatetopic1 = animate;
+        if (animatetopic1)
+        {
+            $('#topic10p .box').css('opacity',0);
+            $('#topic10p .box').css('filter', 'grayscale(100%)');
+            $('#topic10p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic10p .box').removeClass("mui--z4");
+        }    
+    } 
