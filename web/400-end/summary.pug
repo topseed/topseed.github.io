@@ -1,0 +1,36 @@
+#ampp
+    .topicbox.topicbox-3.mui--z4 
+        .topicbox--middle Goal: Create maintainable, future-safe apps fast
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.mui--z1
+    .thumb.thumb-3.thumb-2--selected.mui--z1
+    .thumb-txt.thumb-txt-3 Summary
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#ampimg(src='../200-bricks/res/ampintro.png')
+    //#sub.headline.headline__sub(style='top:27.3vw')
+    ul#ordered-list
+        li Decide added value of component on a case-by-case basis: Does it make you more productive, and the code more maintainable?
+        li Avoid lock-in through framework-specific navigation mechanisms (routers)
+        li Keep Business Logic outside of components
+        li Avoid framework-specific component communication
+        li Apply best practices! 
+
+script.
+    var animateMaterial = true;
+
+    function ampLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#ampp #tbd').css('opacity',0);
+    }
+

@@ -1,0 +1,37 @@
+#gaugep
+    .topicbox.topicbox-1.mui--z4 
+        .topicbox--middle Use 'component.attachShadow' to create a Shadow DOM. 
+    .thumb.thumb-1.thumb-1--selected.mui--z1
+    .thumb.thumb-2.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-1 Foundation
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#agauge(src='../300-perspectives/res/gauge.png')
+    pre#attachshadow-code.
+        attachShadow: function(componentInstance, templateId) {
+            var templateElement = document.querySelector(templateId)
+            var clone = document.importNode(templateElement.content, true);
+            var shadow = componentInstance<b>.attachShadow({mode: 'open'})</b> 
+            shadow.appendChild(clone)
+            return shadow
+        }
+
+script.
+    var animateMaterial = true;
+
+    function gaugeLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#gaugep #tbd').css('opacity',0);
+    }
+

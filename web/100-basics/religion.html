@@ -1,0 +1,29 @@
+
+<div id="religionp">
+  <div class="topicbox topicbox-1 mui--z4"> 
+    <div class="topicbox--middle">What's considered 'the best' changes every 18 months. 'Design for change' to be future-safe.</div>
+  </div>
+  <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+  <div class="thumb thumb-2 mui--z1"></div>
+  <div class="thumb thumb-3 mui--z1"></div>
+  <div class="thumb-txt thumb-txt-1">Foundation</div><img id="relig" src="../300-perspectives/res/comparison.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function browserLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#religionp #tbd').css('opacity',0);
+  }
+</script>

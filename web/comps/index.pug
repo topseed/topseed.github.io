@@ -20,6 +20,11 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../001-intro/book
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../001-intro/steps
         .section
             #header
@@ -30,37 +35,42 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/pug
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
                     include ../100-basics/step1
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../300-perspectives/lego
+                    include ../100-basics/pug
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../300-perspectives/dashboard
+                    include ../100-basics/lego
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../300-perspectives/religion
+                    include ../100-basics/dashboard
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/javascript
+                    include ../100-basics/religion
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/dom
+                    include ../100-basics/javascript
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/gauge
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/w3c
         .section
             #header
                 .mui--text-center
@@ -70,12 +80,7 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/material
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
-                    include ../100-basics/mui
+                    include ../100-basics/htmltemplate
         .section
             #header
                 .mui--text-center
@@ -85,22 +90,12 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/brokencss
+                    include ../100-basics/htmlimport
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/fixedcss
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
-                    include ../100-basics/bem
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
-                    include ../100-basics/prepros
+                    include ../100-basics/htmlimportlate
         .section
             #header
                 .mui--text-center
@@ -110,8 +105,48 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../100-basics/customelement
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/standardelement
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../100-basics/topic4
         .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/shadowdom
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/attachshadow 
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/material
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/mui
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/brokencss
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/fixedcss
+        //-.section
             #header
                 .mui--text-center
                     include ../_part/_top
@@ -130,13 +165,7 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/appshell
-        //- pug template
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
-                    include ../200-bricks/trans
+                    include ../200-bricks/lifecycle
         .section
             #header
                 .mui--text-center
@@ -146,13 +175,12 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/amp
+                    include ../200-bricks/appshell
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/ampsource
-        //- amp validator            
+                    include ../200-bricks/lateload
         .section
             #header
                 .mui--text-center
@@ -162,18 +190,59 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../200-bricks/businesslogic
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/compcom
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../200-bricks/topic8
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/callback
+                    include ../200-bricks/cssvar
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../200-bricks/promise
+                    include ../200-bricks/bem
         .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/prepros
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/trans
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/amp
+        //- .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/ampsource
+        //- amp validator
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/callback
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/promise
+        //-.section
             #header
                 .mui--text-center
                     include ../_part/_top
@@ -192,18 +261,53 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../300-perspectives/gauge
+                    include ../300-perspectives/databinding
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../300-perspectives/browser
+                    include ../300-perspectives/databindingpolymer
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/polymercomps
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/topseedcomps 
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
                     include ../300-perspectives/topic10
         .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/ssrbusiness
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/ssrcomp
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/gauge
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/browser
+        //-.section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../300-perspectives/topic10
+        //-.section
             #header
                 .mui--text-center
                     include ../_part/_top
@@ -218,6 +322,16 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../400-end/summary 
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../001-intro/book
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../400-end/action 
 
     script.
@@ -227,18 +341,24 @@ block main
         function UIinit() {
 
             $('#fullpage').fullpage({
-                anchors: ['title', 'who', 'steps', 'topics', 'pug'
-                    , 'step1', 'lego', 'dashboard', 'religion', 'javascript', 'topic1', 'material', 'mui' 
+                anchors: ['title', 'who', 'book', 'steps', 'topics'
+                    , 'step1', 'pug', 'lego', 'dashboard', 'religion', 'javascript', 'gauge', 'w3c'
+                    , 'topic1', 'htmltemplate'
+                    , 'topic2', 'htmlimport', 'htmlimportlate'
+                    , 'topic3', 'customelement', 'standardelement'
+                    , 'topic4', 'shadowdom', 'attachshadow'
+                    /*, 'material', 'mui' 
                     , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
                     , 'topic3' 
-                    , 'topic4', 'cdn'
-                    , 'steps2', 'topic5', 'appshell', 'trans' 
-                    , 'topic6', 'amp', 'ampsource'
-                    , 'topic7', 'dom'
-                    , 'topic8',  'callback', 'promise', 'fetch'
-                    , 'steps3', 'topic9', 'gauge', 'browser'
-                    , 'topic10', 'phonegap' 
-                    , 'commandments','action'],
+                    , 'topic4', 'cdn'*/
+                    , 'steps2', 'topic5', 'lifecycle'
+                    , 'topic6', 'appshell', 'lateload'
+                    , 'topic7', 'businesslogic', 'compcom'
+                    , 'topic8', 'cssvar', 'bem', 'prepros'
+                    , 'steps3', 'topic9', 'databinding', 'databindingpolymer', 'polymercomps', 'topseedcomps'
+                    , 'topic10', 'ssrbusiness', 'ssrcomp'
+                    /*, 'phonegap','trans', 'amp', 'ampsource','dom', 'callback', 'promise', 'fetch', 'gauge', 'browser'*/
+                    , 'commandments', 'summary', 'book2', 'action'],
                 scrollBar: true,
                 /*navigation: true,
                 navigationPosition: 'right',

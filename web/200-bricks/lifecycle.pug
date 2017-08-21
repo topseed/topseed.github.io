@@ -1,0 +1,35 @@
+#ampp
+    .topicbox.topicbox-2.mui--z4 
+        .topicbox--middle Know the Component lifecycle.
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.thumb-2--selected.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-2 Bricks and Mortar
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#ampimg(src='../200-bricks/res/ampintro.png')
+    //#sub.headline.headline__sub(style='top:27.3vw')
+    ol#ordered-list
+        li Use the Component in page HTML (e.g. &lt;gauge-el&gt;)
+        li Import or fetch (e.g. /GaugeEl.html) and add to DOM (appendChild(...))
+        li Register the Component (document.registerElement(...), only once)
+        li Attach Shadow DOM in Component 'createdCallback' and trigger custom rendering
+
+script.
+    var animateMaterial = true;
+
+    function ampLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#ampp #tbd').css('opacity',0);
+    }
+

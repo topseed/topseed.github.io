@@ -1,0 +1,43 @@
+#gaugep
+    .topicbox.topicbox-2.mui--z4 
+        .topicbox--middle We also stay away from framework-specific component communication mechanisms. We use a Bus of FRP Streams instead.
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.thumb-2--selected.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-2 Bricks and Mortar
+    //img#agauge(src='../300-perspectives/res/gauge.png')
+    pre#attachshadow-code.
+        block main
+            .mui-container-fluid
+                p
+                p List as component:
+                list-el(title='My Custom List Title') loading...
+            script.
+                TS.loadOnAppReady('/page/list/ListBusiness.js', loadComps) 
+                function UIinit() { 
+                    const sb = ListBusiness()
+                    //pass ListBusiness (extends Bus) to Component:
+                    <b>sb.addComp('list-el')</b>
+                    sb.list('list-el')</b>
+                }
+
+
+script.
+    var animateMaterial = true;
+
+    function gaugeLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#gaugep #tbd').css('opacity',0);
+    }
+

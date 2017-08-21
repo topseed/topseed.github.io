@@ -1,0 +1,29 @@
+
+<div id="preprosp">
+  <div class="topicbox topicbox-2 mui--z4"> 
+    <div class="topicbox--middle">We use Prepros as a SASS Preprocessor.</div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+  <div class="thumb thumb-3 mui--z1"></div>
+  <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="preprosimg" src="../100-basics/res/prepros.png"/>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function preprosLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#preprosp #tbd').css('opacity',0);
+  }
+</script>

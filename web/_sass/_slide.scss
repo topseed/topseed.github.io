@@ -26,6 +26,14 @@
      height: 45vw;
 }
 
+#abook {
+     @extend .screenshot;
+     top: 10vw;
+     left: 33vw;
+     width: 30.7vw;
+     height: 45vw;
+}
+
 #wolf {
      @extend .screenshot;
      top: 11vw;
@@ -165,6 +173,100 @@
      @extend .screenshot;
      top: 20vw;
      height: 35.6vw;
+}
+
+#apolymercomps {
+     @extend .screenshot;
+     top: 20vw;
+     height: 35.6vw;
+     width: 59.71vw;
+}
+
+#atopseedcomps {
+     @extend .screenshot;
+     top: 20vw;
+     height: 35.6vw;
+     width: 50.6vw;
+}
+
+#assrcomp {
+     @extend .screenshot;
+     top: 20vw;
+     height: 35.6vw;
+     width: 57.77vw;
+}
+
+#aw3c {
+     @extend .screenshot;
+     top: 20vw;
+     left: 16vw;
+     height: 35.6vw;
+     width: 65.28vw;
+}
+
+.code {
+    position:absolute;
+    top:21vw; 
+    left:22vw;
+    width:56vw;
+    @extend .mui--z1;
+    background-color: white;
+    padding: 10px;
+}
+
+#htmlimport-code {
+    @extend .code;
+    font-size: 18px;
+    left: 19vw;
+    width: 65vw;
+    height: 30vw;
+}
+
+#customelement-code {
+    @extend .code;
+    font-size: 18px;
+    left: 18vw;
+    width: 67vw;
+    height: 30vw;
+}
+
+#attachshadow-code {
+    @extend #customelement-code;
+    font-size: 17px;
+}
+
+#lateload-code {
+    @extend #customelement-code;
+    font-size: 15px;
+}
+
+#cssvar-code {
+    @extend #customelement-code;
+    font-size: 16px;
+}
+
+#databinding-code {
+    @extend #customelement-code;
+    width: 73vw;
+    font-size: 13px;
+}
+
+
+#ordered-list {
+   position: absolute; 
+   left: 18vw; 
+   top: 21vw;
+   width: 64vw; 
+   color: #424242;
+   font-family:Roboto,Arial,Helvetica,sans-serif;
+   font-size: 2.5vw;
+   font-weight: bold;
+   text-align: left;
+   z-index:1;
+}
+
+#ordered-list li {
+    padding: 4px
 }
 
 #brows {

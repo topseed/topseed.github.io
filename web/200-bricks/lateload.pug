@@ -1,0 +1,43 @@
+#gaugep
+    .topicbox.topicbox-2.mui--z4 
+        .topicbox--middle We late-load Components with a tiny helper.
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.thumb-2--selected.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-2 Bricks and Mortar
+     //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#agauge(src='../300-perspectives/res/gauge.png')
+    pre#lateload-code.
+        block main
+            ...
+                p Gauge component:
+                gauge-el
+            script.
+                TS.onAppReady(loadComps) //'pageLoaded'
+                function UIInit() {
+                    console.log('.')
+                }
+                function loadComps() {
+                    TW.<b>loadComp</b>('https://rawgit.com/ ... /_sharedComps/GaugeEl.html')
+                    .then(UIInit)
+                }
+
+script.
+    var animateMaterial = true;
+
+    function gaugeLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#gaugep #tbd').css('opacity',0);
+    }
+
