@@ -1272,7 +1272,6 @@ script.
                 <li id="a5">Know the Component Lifecycle</li>
                 <li id="a6">Loading/AppShell</li>
                 <li id="a7">Business Logic</li>
-                <li id="a8">Styling/CSS</li>
               </ol>
             </div>
             <script>
@@ -1397,7 +1396,6 @@ script.
                 <li class="t--selected" id="a5">Know the Component Lifecycle</li>
                 <li id="a6">Load into AppShell</li>
                 <li id="a7">Business Logic</li>
-                <li id="a8">Styling/CSS</li>
               </ol>
             </div>
             <script>
@@ -1670,7 +1668,6 @@ script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js<
                 <li id="a5">Know the Component Lifecycle</li>
                 <li class="t--selected" id="a6">Load into AppShell</li>
                 <li id="a7">Loosely couple Business Logic and Intercomponent Communication</li>
-                <li id="a8">Styling/CSS</li>
               </ol>
             </div>
             <script>
@@ -1833,208 +1830,6 @@ script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js<
               <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
-            <div id="topic8p">
-              <div class="box box-1v box-1--selected mui--z1" id="bx1v">
-                <div class="box--middle">
-                   The Foundation</div>
-              </div>
-              <div class="box box-2v box-2--selected mui--z2" id="bx2v">
-                <div class="box--middle">
-                   The Bricks and Mortar</div>
-              </div>
-              <ol class="step step3">
-                <li id="a1">Use HTML Templates</li>
-                <li id="a2">Use HTML Imports</li>
-                <li id="a3">Don't use Custom Elements (yet)</li>
-                <li id="a4">Use Shadow DOM</li>
-                <li id="a5">Know the Component Lifecycle</li>
-                <li id="a6">Late-load and use AppShell</li>
-                <li class="t--selected" id="a7">Loosely couple BL and Comp Comm</li>
-                <li id="a8">Style with CSS Variables</li>
-              </ol>
-            </div>
-            <script>
-              function topic8Loaded(){
-                  var bx1 = $('#topic8p #bx1v')
-                  bx1.css('opacity', 1);
-                  bx1.css('filter', 'grayscale(0%)');
-                  var bx2 = $('#topic8p #bx2v')
-                  bx2.css('opacity', 1);
-                  bx2.css('filter', 'grayscale(0%)');
-              
-                  var a1 = $('#topic8p #a7');
-                  var a2 = $('#topic8p #a8');
-              
-                  if (animate) {
-                      var tl = new TimelineMax();
-                      tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
-                      tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
-                      tl.play();
-                  }
-              }
-              function topic8Setup(){
-                  if (animate)
-                  {
-                      $('#topic8p .box').css('opacity',0);
-                      $('#topic8p .box').css('filter', 'grayscale(100%)');
-                      $('#topic8p .box').css('-webkit-filter', 'grayscale(100%)');
-                      $('#topic8p .box').removeClass("mui--z4");
-                  }    
-              } 
-            </script>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div id="header">
-          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
-            <div id="smallgrad"></div>
-            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
-            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
-            <div class="mui--z1" id="bar"></div>
-            <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
-            </div>
-            <div id="gaugep">
-              <div class="topicbox topicbox-2 mui--z4"> 
-                <div class="topicbox--middle">Use CSS Variables and '@apply' to custom-style Components from the outside. (*Polymer/ShadyCSS polyfill)</div>
-              </div>
-              <div class="thumb thumb-1 mui--z1"></div>
-              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
-              <div class="thumb thumb-3 mui--z1"></div>
-              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div>
-              <!--img#agauge(src='../300-perspectives/res/gauge.png')-->
-              <pre id="cssvar-code">template#xlist-el
-    style.
-        .list-el__title { color: var(<b>--list-el__title-color</b>, black); }
-        .list-el__list li { color: orange; }
-        .list-el__list a { cursor: pointer; color: #2196F3; }
-        #title { <b>@apply --mymixin</b> }
-        
-    #title.list-el__title My List Title
-    .list-el__list
-        #myList
-
-...</pre>
-            </div>
-            <script>
-              var animateMaterial = true;
-              
-              function gaugeLoaded(){ 
-                  /*if (animateMaterial)
-                  {
-                      var tl = new TimelineMax();
-                      tl[4] = tl;
-                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
-                      tl.play();
-                  }*/
-              } 
-              
-              function page4Setup(animate){
-                  animatePage4 = animate;
-                  if (animatePage4)
-                      $('#gaugep #tbd').css('opacity',0);
-              }
-            </script>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div id="header">
-          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
-            <div id="smallgrad"></div>
-            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
-            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
-            <div class="mui--z1" id="bar"></div>
-            <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
-            </div>
-            <div id="bemp">
-              <div class="topicbox topicbox-2 mui--z4"> 
-                <div class="topicbox--middle">We love Block-Element-Modifier (BEM) Naming for maintainable CSS.</div>
-              </div>
-              <div class="thumb thumb-1 mui--z1"></div>
-              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
-              <div class="thumb thumb-3 mui--z1"></div>
-              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="bemimg" src="../100-basics/res/bem.png">
-            </div>
-            <script>
-              var animateMaterial = true;
-              
-              function bemLoaded(){ 
-                  /*if (animateMaterial)
-                  {
-                      var tl = new TimelineMax();
-                      tl[4] = tl;
-                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
-                      tl.play();
-                  }*/
-              } 
-              
-              function page4Setup(animate){
-                  animatePage4 = animate;
-                  if (animatePage4)
-                      $('#bemp #tbd').css('opacity',0);
-              }
-            </script>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div id="header">
-          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
-            <div id="smallgrad"></div>
-            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
-            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
-            <div class="mui--z1" id="bar"></div>
-            <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
-            </div>
-            <div id="preprosp">
-              <div class="topicbox topicbox-2 mui--z4"> 
-                <div class="topicbox--middle">We use Prepros as a SASS Preprocessor.</div>
-              </div>
-              <div class="thumb thumb-1 mui--z1"></div>
-              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
-              <div class="thumb thumb-3 mui--z1"></div>
-              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div><img id="preprosimg" src="../100-basics/res/prepros.png">
-            </div>
-            <script>
-              var animateMaterial = true;
-              
-              function preprosLoaded(){ 
-                  /*if (animateMaterial)
-                  {
-                      var tl = new TimelineMax();
-                      tl[4] = tl;
-                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
-                      tl.play();
-                  }*/
-              } 
-              
-              function page4Setup(animate){
-                  animatePage4 = animate;
-                  if (animatePage4)
-                      $('#preprosp #tbd').css('opacity',0);
-              }
-            </script>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div id="header">
-          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
-            <div id="smallgrad"></div>
-            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
-            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
-            <div class="mui--z1" id="bar"></div>
-            <div id="logo">
-              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
-              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
-            </div>
             <div id="steps3p">
               <div class="headline" style="top:11.5vw;">Goal: Create maintainable, future-safe apps fast</div>
               <div class="box box-1 box-1--selected mui--z3" id="bx1">
@@ -2117,9 +1912,9 @@ script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js<
                 <li id="a4">Use Shadow DOM</li>
                 <li id="a5">Know the Component Lifecycle</li>
                 <li id="a6">Late-load and use AppShell</li>
-                <li id="a7">Keep Business Logic outside</li>
-                <li class="t--selected" id="a8">Style with CSS Variables</li>
-                <li id="a9">Evaluate Polymer</li>
+                <li id="a7">Loosely couple Business Logic and Intercomponent Communication</li>
+                <!--li#a8.t--selected Style with CSS Variables-->
+                <li class="t--selected" id="a9">Evaluate Polymer</li>
                 <li id="a10">SSR</li>
               </ol>
             </div>
@@ -2400,8 +2195,8 @@ script.
                 <li id="a4">Use Shadow DOM</li>
                 <li id="a5">Know the Component Lifecycle</li>
                 <li id="a6">Late-load and use AppShell</li>
-                <li id="a7">Keep Business Logic outside</li>
-                <li id="a8">Style with CSS Variables</li>
+                <li id="a7">Loosely couple Business Logic and Intercomponent Communication</li>
+                <!--li#a8 Style with CSS Variables-->
                 <li class="t--selected" id="a9">Evaluate Polymer</li>
                 <li id="a10">Consider SSR</li>
               </ol>
@@ -2580,8 +2375,8 @@ router.get('/', function (req, res) {
                 <li class="t--selected" id="a4">Use Shadow DOM</li>
                 <li class="t--selected" id="a5">Know the Component Lifecycle</li>
                 <li class="t--selected" id="a6">Late-load and use AppShell</li>
-                <li class="t--selected" id="a7">Loosely couple BL and Comp Comm</li>
-                <li class="t--selected" id="a8">Style with CSS Variables</li>
+                <li class="t--selected" id="a7">Loosely couple Business Logic and Intercomponent Communication</li>
+                <!--li#a8.t--selected Style with CSS Variables-->
                 <li class="t--selected" id="a9">Evaluate Polymer</li>
                 <li class="t--selected" id="a10">Consider SSR</li>
               </ol>
@@ -2649,7 +2444,7 @@ router.get('/', function (req, res) {
               <!--#sub.headline.headline__sub(style='top:27.3vw')-->
               <ul id="ordered-list">
                 <li>Decide added value of component on a case-by-case basis: Does it make you more productive, and the code more maintainable?</li>
-                <li>Avoid lock-in through framework-specific navigation mechanisms (routers)</li>
+                <li>Avoid lock-in by component-framework-specific navigation mechanisms (routers)</li>
                 <li>Keep Business Logic outside of components</li>
                 <li>Avoid framework-specific component communication</li>
                 <li>Apply best practices! </li>
@@ -2787,7 +2582,7 @@ router.get('/', function (req, res) {
                   , 'steps2', 'topic5', 'lifecycle'
                   , 'topic6', 'appshell', 'setupjs','mainjs', 'lateload'
                   , 'topic7', 'businesslogic', 'compcom'
-                  , 'topic8', 'cssvar', 'bem', 'prepros'
+                  /*, 'topic8', 'cssvar', 'bem', 'prepros'*/
                   , 'steps3', 'topic9', 'databinding', 'databindingpolymer', 'polymercomps', 'topseedcomps'
                   , 'topic10', 'ssrbusiness', 'ssrcomp'
                   /*, 'phonegap','trans', 'amp', 'ampsource','dom', 'callback', 'promise', 'fetch', 'gauge', 'browser'*/

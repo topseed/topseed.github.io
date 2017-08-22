@@ -232,7 +232,7 @@
 
 #htmlimport-code {
     @extend .code;
-    font-size: 18px;
+    font-size: 1.9vw; //18px;
     left: 19vw;
     width: 65vw;
     height: 30vw;
@@ -240,7 +240,7 @@
 
 #customelement-code {
     @extend .code;
-    font-size: 18px;
+    font-size: 1.9vw; //18px;
     left: 18vw;
     width: 67vw;
     height: 30vw;
@@ -248,32 +248,32 @@
 
 #attachshadow-code {
     @extend #customelement-code;
-    font-size: 17px;
+    font-size: 1.8vw; //17px;
 }
 
 #lateload-code {
     @extend #customelement-code;
-    font-size: 15px;
+    font-size: 1.48vw; //15px;
 }
 
 #mainjs-code {
     @extend .code;
-    font-size: 14px;
+    font-size: 1.3vw; //14px;
     top: 20vw;
-    left: 9vw;
-    width: 82vw;
+    left: 8vw;
+    width: 84vw;
     height: 21vw;
 }
 
 #cssvar-code {
     @extend #customelement-code;
-    font-size: 16px;
+    font-size: 1.7vw; //16px;
 }
 
 #databinding-code {
     @extend #customelement-code;
     width: 73vw;
-    font-size: 13px;
+    font-size: 1.4vw; //13px;
 }
 
 

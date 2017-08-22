@@ -170,36 +170,36 @@
   padding: 10px; }
 
 #htmlimport-code {
-  font-size: 18px;
+  font-size: 1.9vw;
   left: 19vw;
   width: 65vw;
   height: 30vw; }
 
 #customelement-code, #attachshadow-code, #lateload-code, #cssvar-code, #databinding-code {
-  font-size: 18px;
+  font-size: 1.9vw;
   left: 18vw;
   width: 67vw;
   height: 30vw; }
 
 #attachshadow-code {
-  font-size: 17px; }
+  font-size: 1.8vw; }
 
 #lateload-code {
-  font-size: 15px; }
+  font-size: 1.48vw; }
 
 #mainjs-code {
-  font-size: 14px;
+  font-size: 1.3vw;
   top: 20vw;
-  left: 9vw;
-  width: 82vw;
+  left: 8vw;
+  width: 84vw;
   height: 21vw; }
 
 #cssvar-code {
-  font-size: 16px; }
+  font-size: 1.7vw; }
 
 #databinding-code {
   width: 73vw;
-  font-size: 13px; }
+  font-size: 1.4vw; }
 
 #ordered-list, #events-list {
   position: absolute;
