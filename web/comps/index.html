@@ -61,7 +61,7 @@
               <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
-            <div id="whop"><img id="whoami" src="../001-intro/res/struts.png"></div>
+            <div id="whop"><a href="http://dilbert.com/strip/2010-05-16" target="_blank"><img id="whoami" src="../001-intro/res/struts.png"></a></div>
           </div>
         </div>
       </div>
@@ -77,6 +77,21 @@
               <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
             <div id="whop"><img id="abook" src="../001-intro/res/book.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="whop"><img id="atclient" src="../001-intro/res/cnbc-sm.jpg"></div>
           </div>
         </div>
       </div>
@@ -282,7 +297,7 @@
             </div>
             <div id="pugp">
               <div class="topicbox topicbox-1 mui--z4"> 
-                <div class="topicbox--middle">Side note: We use Pug (Jade) for clean, maintainable HTML; Node.js Express supports it.</div>
+                <div class="topicbox--middle">ATTENTION: We use Pug (Jade) for clean, maintainable HTML; Node.js Express supports it.</div>
               </div>
               <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
               <div class="thumb thumb-2 mui--z1"></div>
@@ -540,6 +555,48 @@
               <div class="thumb thumb-2 mui--z1"></div>
               <div class="thumb thumb-3 mui--z1"></div>
               <div class="thumb-txt thumb-txt-1">Foundation</div><img id="aw3c" src="../100-basics/res/w3c.png">
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function gaugeLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#gaugep #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="gaugep">
+              <div class="topicbox topicbox-1 mui--z4"> 
+                <div class="topicbox--middle">Web Component support in latest browser releases (June 2017):</div>
+              </div>
+              <div class="thumb thumb-1 thumb-1--selected mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-1">Foundation</div><img id="browsersupport" src="../100-basics/res/browsersupport.png">
             </div>
             <script>
               var animateMaterial = true;
@@ -1430,6 +1487,116 @@ script.
             </div>
             <div id="gaugep">
               <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">We detect browser and load polyfills via setup.js in AppShell page header.</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div>
+              <!--img#agauge(src='../300-perspectives/res/gauge.png')-->
+              <pre id="lateload-code">meta(charset='utf-8')
+meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
+link(rel='icon', href='/favicon.ico')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+script(src='//code.jquery.com/jquery-3.2.1.slim.min.js' async)
+//-script.
+    var main_js = '/_js/main.js' 
+script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js</b>')
+</pre>
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function gaugeLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#gaugep #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="gaugep">
+              <div class="topicbox topicbox-2 mui--z4"> 
+                <div class="topicbox--middle">We preload project-specific JavaScript libs in main.js</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
+              <div class="thumb thumb-3 mui--z1"></div>
+              <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div>
+              <!--img#agauge(src='../300-perspectives/res/gauge.png')-->
+              <pre id="mainjs-code">var TM = {
+    loadLibs: function(){
+        return Promise.all([
+            TS.load('//cdn.jsdelivr.net/dot.js/1.1.1/doT.min.js')
+            //Standard Web Component helper lib:
+            , TS.load('//cdn.rawgit.com/topseed/topseed-turbo/master/webComps/tw-4.1.js').then(function(){TW.init()})
+            , TS.load('//cdn.jsdelivr.net/riot/3.4.4/riot+compiler.min.js') //Support for RIOT
+            , TS.load('//rawgit.com/topseed/topseed-turbo/master/release/topseed-turbo-latest.js')
+            , TS.load('/_js/BLX.js')
+            , TS.load('/_js/BDS.js')
+        ])
+        .then(TM.libsLoaded)
+    }
+    , ...</pre>
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function gaugeLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#gaugep #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
+            <div id="gaugep">
+              <div class="topicbox topicbox-2 mui--z4"> 
                 <div class="topicbox--middle">We late-load Components with a tiny helper.</div>
               </div>
               <div class="thumb thumb-1 mui--z1"></div>
@@ -1438,13 +1605,14 @@ script.
               <div class="thumb-txt thumb-txt-2">Bricks and Mortar</div>
               <!--img#agauge(src='../300-perspectives/res/gauge.png')-->
               <pre id="lateload-code">block main
-    ...
+    .mui-container-fluid
+        p
         p Gauge component:
         gauge-el
     script.
         TS.onAppReady(loadComps) //'pageLoaded'
         function UIInit() {
-            console.log('.')
+            console.log('more stuff here (DOM is ready for it)')
         }
         function loadComps() {
             TW.<b>loadComp</b>('https://rawgit.com/ ... /_sharedComps/GaugeEl.html')
@@ -1609,7 +1777,7 @@ script.
             </div>
             <div id="gaugep">
               <div class="topicbox topicbox-2 mui--z4"> 
-                <div class="topicbox--middle">We also stay away from framework-specific component communication mechanisms. We use a Bus of FRP Streams instead.</div>
+                <div class="topicbox--middle">We also stay away from framework-specific component communication mechanisms. We use a bus of FRP Streams instead.</div>
               </div>
               <div class="thumb thumb-1 mui--z1"></div>
               <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
@@ -1625,7 +1793,7 @@ script.
         TS.loadOnAppReady('/page/list/ListBusiness.js', loadComps) 
         function UIinit() { 
             const sb = ListBusiness()
-            //pass ListBusiness (extends Bus) to Component:
+            //pass ListBusiness (extends bus) to Component:
             <b>sb.addComp('list-el')</b>
             sb.list('list-el')</b>
         }
@@ -2534,6 +2702,59 @@ router.get('/', function (req, res) {
               <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
               <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
             </div>
+            <div id="ampp">
+              <div class="topicbox topicbox-3 mui--z4"> 
+                <div class="topicbox--middle">Related events near you:</div>
+              </div>
+              <div class="thumb thumb-1 mui--z1"></div>
+              <div class="thumb thumb-2 mui--z1"></div>
+              <div class="thumb thumb-3 thumb-2--selected mui--z1"></div>
+              <div class="thumb-txt thumb-txt-3">Events</div>
+              <!--img#ampimg(src='../200-bricks/res/ampintro.png')-->
+              <!--#sub.headline.headline__sub(style='top:27.3vw')-->
+              <ul id="events-list">
+                <li>
+                   Aug 28-29, 2017:<br>Polymer Best Practices Boot Camp (Los Angeles)<br>polymerbootcamp.com</li>
+                <li>
+                   Aug 30-Sep 1, 2017:<br>Web App Front-End Best Practices 2017 (Los Angeles)<br>m.appthings.io</li>
+                <li>
+                   TBA (Nov?): Polymer THE CONFERENCE (Los Angeles)<br>hi@appthings.io</li>
+                <li>Contact hi@appthings.io for inhouse seminars and workshops </li>
+              </ul>
+            </div>
+            <script>
+              var animateMaterial = true;
+              
+              function ampLoaded(){ 
+                  /*if (animateMaterial)
+                  {
+                      var tl = new TimelineMax();
+                      tl[4] = tl;
+                      tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+                      tl.play();
+                  }*/
+              } 
+              
+              function page4Setup(animate){
+                  animatePage4 = animate;
+                  if (animatePage4)
+                      $('#ampp #tbd').css('opacity',0);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="header">
+          <div class="mui--text-center"><img class="rfid" src="/web/master/res/watermark.svg">
+            <div id="smallgrad"></div>
+            <div class="header--tagline"><a class="header--tagline-link" href="https://m.appthings.io" target="_blank">m.appthings.io</a></div>
+            <div class="header--tagline header--tagline__right mui--no-user-select">We Make Web Apps Work.<span style="font-weight:normal;">&trade;</span></div>
+            <div class="mui--z1" id="bar"></div>
+            <div id="logo">
+              <div class="mui--text-center"><a href="https://m.appthings.io" target="_blank"><img id="logo--rfid" src="/web/master/res/globe.svg" target="_blank" alt="appThings Home"></a></div>
+              <div class="mui--text-center"><img id="logo--tag" src="/web/master/res/appthings.svg" target="_blank" alt="appThings"></div>
+            </div>
             <div id="actionp"><img id="wolf" src="../400-end/res/wolf.jpg">
               <div class="headline headline__sub" id="sub" style="top:33.5vw;">If you liked this and can use help, hire us!</div>
               <div class="headline headline__sub2" id="sub2" style="top:39vw;">
@@ -2552,8 +2773,8 @@ router.get('/', function (req, res) {
       function UIinit() {
       
           $('#fullpage').fullpage({
-              anchors: ['title', 'who', 'book', 'steps', 'topics'
-                  , 'step1', 'pug', 'lego', 'dashboard', 'religion', 'javascript', 'gauge', 'w3c'
+              anchors: ['title', 'who', 'book', 'cnbc', 'steps', 'topics'
+                  , 'step1', 'pug', 'lego', 'dashboard', 'religion', 'javascript', 'gauge', 'w3c', 'browsersupport'
                   , 'topic1', 'htmltemplate'
                   , 'topic2', 'htmlimport', 'htmlimportlate'
                   , 'topic3', 'customelement', 'standardelement'
@@ -2563,13 +2784,13 @@ router.get('/', function (req, res) {
                   , 'topic3' 
                   , 'topic4', 'cdn'*/
                   , 'steps2', 'topic5', 'lifecycle'
-                  , 'topic6', 'appshell', 'lateload'
+                  , 'topic6', 'appshell', 'setupjs','mainjs', 'lateload'
                   , 'topic7', 'businesslogic', 'compcom'
                   , 'topic8', 'cssvar', 'bem', 'prepros'
                   , 'steps3', 'topic9', 'databinding', 'databindingpolymer', 'polymercomps', 'topseedcomps'
                   , 'topic10', 'ssrbusiness', 'ssrcomp'
                   /*, 'phonegap','trans', 'amp', 'ampsource','dom', 'callback', 'promise', 'fetch', 'gauge', 'browser'*/
-                  , 'commandments', 'summary', 'book2', 'action'],
+                  , 'commandments', 'summary', 'book2', 'events','action'],
               scrollBar: true,
               /*navigation: true,
               navigationPosition: 'right',

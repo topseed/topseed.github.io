@@ -1,0 +1,40 @@
+
+<div id="ampp">
+  <div class="topicbox topicbox-3 mui--z4"> 
+    <div class="topicbox--middle">Related events near you"</div>
+  </div>
+  <div class="thumb thumb-1 mui--z1"></div>
+  <div class="thumb thumb-2 mui--z1"></div>
+  <div class="thumb thumb-3 thumb-2--selected mui--z1"></div>
+  <div class="thumb-txt thumb-txt-3">Summary</div>
+  <!--img#ampimg(src='../200-bricks/res/ampintro.png')-->
+  <!--#sub.headline.headline__sub(style='top:27.3vw')-->
+  <ul id="ordered-list">
+    <li>
+       Aug 28-29, 2017:  Polymer Best Practices Boot Camp (Los Angeles)<br/>m.appthings.io</li>
+    <li>
+       Aug 30-Sep 1, 2017: Web App Front-End Best Practices 2017 (Los Angeles)<br/>polymerbootcamp.com</li>
+    <li>
+       TBA (Nov?): Polymer THE CONFERENCE (Los Angeles)<br/>hi@appthings.io</li>
+    <li>Contact hi@appthings.io for inhouse seminars and workshops </li>
+  </ul>
+</div>
+<script>
+  var animateMaterial = true;
+  
+  function ampLoaded(){ 
+      /*if (animateMaterial)
+      {
+          var tl = new TimelineMax();
+          tl[4] = tl;
+          tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+          tl.play();
+      }*/
+  } 
+  
+  function page4Setup(animate){
+      animatePage4 = animate;
+      if (animatePage4)
+          $('#ampp #tbd').css('opacity',0);
+  }
+</script>

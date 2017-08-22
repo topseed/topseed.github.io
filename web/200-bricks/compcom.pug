@@ -1,6 +1,6 @@
 #gaugep
     .topicbox.topicbox-2.mui--z4 
-        .topicbox--middle We also stay away from framework-specific component communication mechanisms. We use a Bus of FRP Streams instead.
+        .topicbox--middle We also stay away from framework-specific component communication mechanisms. We use a bus of FRP Streams instead.
     .thumb.thumb-1.mui--z1
     .thumb.thumb-2.thumb-2--selected.mui--z1
     .thumb.thumb-3.mui--z1
@@ -16,7 +16,7 @@
                 TS.loadOnAppReady('/page/list/ListBusiness.js', loadComps) 
                 function UIinit() { 
                     const sb = ListBusiness()
-                    //pass ListBusiness (extends Bus) to Component:
+                    //pass ListBusiness (extends bus) to Component:
                     <b>sb.addComp('list-el')</b>
                     sb.list('list-el')</b>
                 }

@@ -1,0 +1,43 @@
+#gaugep
+    .topicbox.topicbox-2.mui--z4 
+        .topicbox--middle We preload project-specific JavaScript libs in main.js
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.thumb-2--selected.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-2 Bricks and Mortar
+     //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#agauge(src='../300-perspectives/res/gauge.png')
+    pre#mainjs-code.
+        var TM = {
+            loadLibs: function(){
+                return Promise.all([
+                    TS.load('//cdn.jsdelivr.net/dot.js/1.1.1/doT.min.js')
+                    //Standard Web Component helper lib:
+                    , TS.load('//cdn.rawgit.com/topseed/topseed-turbo/master/webComps/tw-4.1.js').then(function(){TW.init()})
+                    , TS.load('//cdn.jsdelivr.net/riot/3.4.4/riot+compiler.min.js') //Support for RIOT
+                    , TS.load('//rawgit.com/topseed/topseed-turbo/master/release/topseed-turbo-latest.js')
+                    , TS.load('/_js/BLX.js')
+                    , TS.load('/_js/BDS.js')
+                ])
+                .then(TM.libsLoaded)
+            }
+            , ...
+script.
+    var animateMaterial = true;
+
+    function gaugeLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#gaugep #tbd').css('opacity',0);
+    }
+

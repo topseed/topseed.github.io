@@ -26,6 +26,14 @@
      height: 45vw;
 }
 
+#atclient {
+     @extend .screenshot;
+     top: 10vw;
+     left: 30vw;
+     width: 41.2vw;
+     height: 45vw;
+}
+
 #abook {
      @extend .screenshot;
      top: 10vw;
@@ -204,6 +212,14 @@
      width: 65.28vw;
 }
 
+#browsersupport {
+     @extend .screenshot;
+     top: 23vw;
+     left: 20vw;
+     height: 28.5vw;
+     width: 59.65vw;
+}
+
 .code {
     position:absolute;
     top:21vw; 
@@ -240,6 +256,15 @@
     font-size: 15px;
 }
 
+#mainjs-code {
+    @extend .code;
+    font-size: 14px;
+    top: 20vw;
+    left: 9vw;
+    width: 82vw;
+    height: 21vw;
+}
+
 #cssvar-code {
     @extend #customelement-code;
     font-size: 16px;
@@ -267,6 +292,11 @@
 
 #ordered-list li {
     padding: 4px
+}
+
+#events-list {
+    @extend #ordered-list;
+    top: 19vw;
 }
 
 #brows {

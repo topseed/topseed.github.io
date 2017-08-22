@@ -1,0 +1,49 @@
+#ampp
+    .topicbox.topicbox-3.mui--z4 
+        .topicbox--middle Related events near you:
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.mui--z1
+    .thumb.thumb-3.thumb-2--selected.mui--z1
+    .thumb-txt.thumb-txt-3 Events
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    //img#ampimg(src='../200-bricks/res/ampintro.png')
+    //#sub.headline.headline__sub(style='top:27.3vw')
+    ul#events-list
+        li 
+            | Aug 28-29, 2017:
+            br
+            | Polymer Best Practices Boot Camp (Los Angeles)
+            br 
+            | polymerbootcamp.com
+        li 
+            | Aug 30-Sep 1, 2017:
+            br
+            | Web App Front-End Best Practices 2017 (Los Angeles)
+            br 
+            | m.appthings.io
+        li 
+            | TBA (Nov?): Polymer THE CONFERENCE (Los Angeles)
+            br 
+            | hi@appthings.io
+        li Contact hi@appthings.io for inhouse seminars and workshops 
+
+
+script.
+    var animateMaterial = true;
+
+    function ampLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#ampp #tbd').css('opacity',0);
+    }
+

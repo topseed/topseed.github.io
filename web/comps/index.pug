@@ -25,6 +25,11 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../001-intro/cnbc
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../001-intro/steps
         .section
             #header
@@ -71,6 +76,11 @@ block main
                 .mui--text-center
                     include ../_part/_top
                     include ../100-basics/w3c
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/browsersupport
         .section
             #header
                 .mui--text-center
@@ -176,6 +186,16 @@ block main
                 .mui--text-center
                     include ../_part/_top
                     include ../200-bricks/appshell
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/setupjs
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../200-bricks/mainjs
         .section
             #header
                 .mui--text-center
@@ -332,6 +352,11 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../400-end/events
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../400-end/action 
 
     script.
@@ -341,8 +366,8 @@ block main
         function UIinit() {
 
             $('#fullpage').fullpage({
-                anchors: ['title', 'who', 'book', 'steps', 'topics'
-                    , 'step1', 'pug', 'lego', 'dashboard', 'religion', 'javascript', 'gauge', 'w3c'
+                anchors: ['title', 'who', 'book', 'cnbc', 'steps', 'topics'
+                    , 'step1', 'pug', 'lego', 'dashboard', 'religion', 'javascript', 'gauge', 'w3c', 'browsersupport'
                     , 'topic1', 'htmltemplate'
                     , 'topic2', 'htmlimport', 'htmlimportlate'
                     , 'topic3', 'customelement', 'standardelement'
@@ -352,13 +377,13 @@ block main
                     , 'topic3' 
                     , 'topic4', 'cdn'*/
                     , 'steps2', 'topic5', 'lifecycle'
-                    , 'topic6', 'appshell', 'lateload'
+                    , 'topic6', 'appshell', 'setupjs','mainjs', 'lateload'
                     , 'topic7', 'businesslogic', 'compcom'
                     , 'topic8', 'cssvar', 'bem', 'prepros'
                     , 'steps3', 'topic9', 'databinding', 'databindingpolymer', 'polymercomps', 'topseedcomps'
                     , 'topic10', 'ssrbusiness', 'ssrcomp'
                     /*, 'phonegap','trans', 'amp', 'ampsource','dom', 'callback', 'promise', 'fetch', 'gauge', 'browser'*/
-                    , 'commandments', 'summary', 'book2', 'action'],
+                    , 'commandments', 'summary', 'book2', 'events','action'],
                 scrollBar: true,
                 /*navigation: true,
                 navigationPosition: 'right',

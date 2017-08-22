@@ -1,6 +1,6 @@
 #gaugep
     .topicbox.topicbox-2.mui--z4 
-        .topicbox--middle We late-load Components with a tiny helper.
+        .topicbox--middle We detect browser and load polyfills via setup.js in AppShell page header.
     .thumb.thumb-1.mui--z1
     .thumb.thumb-2.thumb-2--selected.mui--z1
     .thumb.thumb-3.mui--z1
@@ -8,20 +8,15 @@
      //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
     //img#agauge(src='../300-perspectives/res/gauge.png')
     pre#lateload-code.
-        block main
-            .mui-container-fluid
-                p
-                p Gauge component:
-                gauge-el
-            script.
-                TS.onAppReady(loadComps) //'pageLoaded'
-                function UIInit() {
-                    console.log('more stuff here (DOM is ready for it)')
-                }
-                function loadComps() {
-                    TW.<b>loadComp</b>('https://rawgit.com/ ... /_sharedComps/GaugeEl.html')
-                    .then(UIInit)
-                }
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
+        link(rel='icon', href='/favicon.ico')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+        script(src='//code.jquery.com/jquery-3.2.1.slim.min.js' async)
+        //-script.
+            var main_js = '/_js/main.js' 
+        script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js</b>')
 
 script.
     var animateMaterial = true;
