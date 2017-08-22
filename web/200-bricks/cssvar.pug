@@ -1,6 +1,6 @@
 #gaugep
     .topicbox.topicbox-2.mui--z4 
-        .topicbox--middle We use CSS Variables to custom-style Components from the outside.
+        .topicbox--middle Use CSS Variables and '@apply' to custom-style Components from the outside. (*Polymer/ShadyCSS polyfill)
     .thumb.thumb-1.mui--z1
     .thumb.thumb-2.thumb-2--selected.mui--z1
     .thumb.thumb-3.mui--z1
@@ -12,6 +12,7 @@
                 .list-el__title { color: var(<b>--list-el__title-color</b>, black); }
                 .list-el__list li { color: orange; }
                 .list-el__list a { cursor: pointer; color: #2196F3; }
+                #title { <b>@apply --mymixin</b> }
                 
             #title.list-el__title My List Title
             .list-el__list

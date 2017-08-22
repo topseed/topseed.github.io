@@ -1898,7 +1898,7 @@ script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js<
             </div>
             <div id="gaugep">
               <div class="topicbox topicbox-2 mui--z4"> 
-                <div class="topicbox--middle">We use CSS Variables to custom-style Components from the outside.</div>
+                <div class="topicbox--middle">Use CSS Variables and '@apply' to custom-style Components from the outside. (*Polymer/ShadyCSS polyfill)</div>
               </div>
               <div class="thumb thumb-1 mui--z1"></div>
               <div class="thumb thumb-2 thumb-2--selected mui--z1"></div>
@@ -1910,6 +1910,7 @@ script(src='//cdn.rawgit.com/topseed/topseed-turbo/master/setup/<b>setup-6.3.js<
         .list-el__title { color: var(<b>--list-el__title-color</b>, black); }
         .list-el__list li { color: orange; }
         .list-el__list a { cursor: pointer; color: #2196F3; }
+        #title { <b>@apply --mymixin</b> }
         
     #title.list-el__title My List Title
     .list-el__list
