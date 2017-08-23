@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #whoami, #atclient, #abook, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #apolymercomps, #atopseedcomps, #assrcomp, #aw3c, #browsersupport, #brows, #phoneg, .code, #htmlimport-code, #customelement-code, #attachshadow-code, #lateload-code, #cssvar-code, #databinding-code, #mainjs-code {
+.mui--z1, .screenshot, #whoami, #atclient, #abook, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #apolymercomps, #atopseedcomps, #assrcomp, #aw3c, #abrowsersupport, #brows, #phoneg, .code, #htmlimport-code, #customelement-code, #attachshadow-code, #lateload-code, #cssvar-code, #databinding-code, #mainjs-code {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #whoami, #atclient, #abook, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #apolymercomps, #atopseedcomps, #assrcomp, #aw3c, #browsersupport, #brows, #phoneg {
+.screenshot, #whoami, #atclient, #abook, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #apolymercomps, #atopseedcomps, #assrcomp, #aw3c, #abrowsersupport, #brows, #phoneg {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -155,7 +155,7 @@
   height: 35.6vw;
   width: 65.28vw; }
 
-#browsersupport {
+#abrowsersupport {
   top: 23vw;
   left: 20vw;
   height: 28.5vw;
