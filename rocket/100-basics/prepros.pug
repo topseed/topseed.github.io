@@ -1,0 +1,29 @@
+#preprosp
+    .topicbox.topicbox-1.mui--z4 
+        .topicbox--middle Use a SASS Preprocessor (e.g. Prepros.io, IDE, bower?)
+    .thumb.thumb-1.thumb-1--selected.mui--z1
+    .thumb.thumb-2.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-1 Foundation
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    img#preprosimg(src='../100-basics/res/prepros.png')
+
+script.
+    var animateMaterial = true;
+
+    function preprosLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#preprosp #tbd').css('opacity',0);
+    }
+

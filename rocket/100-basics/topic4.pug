@@ -1,0 +1,55 @@
+#topic4p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z2
+        .box--middle 
+            //-| Step I:
+            //-br
+            | The Foundation
+    //-#bx2v.box.box-2v.box-2--selected
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    //-#bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step1
+        li#a1 Apply Design Guidelines
+        li#a2 Use SASS, BEM, Preprocessors
+        li#a3.t--selected Use Pug for maintainable HTML
+        li#a4 Go (max) static, deploy to CDN edge cache to scale for performance
+
+script.
+    function topic4Loaded(){
+
+        var bx1 = $('#topic4p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic4p #a3');
+        var a2 = $('#topic4p #a4');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+            tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+            tl.play();
+        }
+        else
+        {
+           a2.addClass("t--selected"); 
+        }
+    }
+    function topic4Setup(){
+        if (animate)
+        {
+            $('#topic4p .box').css('opacity',0);
+            $('#topic4p .box').css('filter', 'grayscale(100%)');
+            $('#topic4p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic4p .box').removeClass("mui--z1");
+        }    
+    } 

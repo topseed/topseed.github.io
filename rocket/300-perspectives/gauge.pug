@@ -1,0 +1,30 @@
+#gaugep
+
+    .topicbox.topicbox-3.mui--z4 
+        .topicbox--middle A standard is finally emerging: Standard Web Components (Polymer is already built on top of it). It's DOM-centric:
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.mui--z1
+    .thumb.thumb-3.thumb-3--selected.mui--z1
+    .thumb-txt.thumb-txt-3 Perspectives
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    img#agauge(src='../300-perspectives/res/gauge.png')
+
+script.
+    var animateMaterial = true;
+
+    function gaugeLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#gaugep #tbd').css('opacity',0);
+    }
+

@@ -1,0 +1,60 @@
+#topic1p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z2
+        .box--middle 
+            | Step I:
+            br
+            | The Foundation
+    //-#bx2v.box.box-2v.box-2--selected
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    //-#bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step1
+        li#a1 Apply Design Guidelines (e.g. Material Design, MUICSS) for beauty and consistency
+        li#a2 CSS
+        li#a3 HTML
+        li#a4 Performance
+    //-
+        li#a5 SPA/Rich client 'feel'
+        li#a6 Time to Glass
+        li#a7 HTML vs. JavaScript
+        li#a8 Business Logic
+        li#a9 Web Components
+        li#a10 Mobile Apps        
+
+script.
+    function topic1Loaded(){
+
+        var bx1 = $('#topic1p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic1p #a1');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a1, 2, {css: {className:'+=t--selected'}}); 
+            tl.play();
+        }
+        else
+        {
+           a1.addClass("t--selected"); 
+        }
+    }
+    function topic1Setup(){
+       if (animate)
+        {
+            $('#topicsp .box').css('opacity',0);
+            $('#topicsp .box').css('filter', 'grayscale(100%)');
+            $('#topicsp .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topicsp .box').removeClass("mui--z4");
+        }    
+    } 

@@ -1,0 +1,55 @@
+#stepsp
+    .headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1.box.box-1.box-1--selected
+        .box--middle 
+            | Step I:
+            br
+            | The Foundation
+    #bx2.box.box-2.box-2--selected 
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    #bx3.box.box-3.box-3--selected 
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+
+
+
+
+script.
+    function stepsLoaded(){
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl[5] = tl;
+            var bx1 = $('#stepsp #bx1'); bx2 = $('#stepsp #bx2'); bx3 = $('#stepsp #bx3');                 
+
+            tl.to(bx1, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
+            tl.to(bx1, 2, {opacity:100, ease:Power1.easeIn}, 0);
+            tl.from(bx1, 2, {scale:.93, ease:Power1.easeIn}, 0);
+            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
+            tl.to(bx2, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 3);
+            tl.to(bx2, 2, {opacity:100, ease:Power2.easeIn}, 3);
+            tl.from(bx2, 2, {scale:.93, ease:Power1.easeIn}, 3);
+            tl.call(function() {bx2.addClass("mui--z4");}, null, null, 3);
+            tl.to(bx3, 2, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 6);
+            tl.to(bx3, 2, {opacity:100, ease:Power1.easeIn}, 6);
+            tl.from(bx3, 2, {scale:.93, ease:Power1.easeIn}, 6);
+            tl.call(function() {bx3.addClass("mui--z4");}, null, null, 6);
+            tl.play();
+        }
+    }
+    function page5Setup(animate){
+        animatePage5 = animate;
+        if (animatePage5)
+        {
+            $('#stepsp .box').css('opacity',0);
+            $('#stepsp .box').css('filter', 'grayscale(100%)');
+            $('#stepsp .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#stepsp .box').removeClass("mui--z4");
+        }    
+    } 

@@ -1,0 +1,59 @@
+#topic8p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z1
+        .box--middle 
+            //-| Step I:
+            //-br
+            | The Foundation
+    #bx2v.box.box-2v.box-2--selected.mui--z2
+        .box--middle 
+            //-| Step II:
+            //-br
+            | The Bricks and Mortar
+    //-#bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step3
+        li#a1 Apply Design Guidelines
+        li#a2 Use SASS, BEM, Preprocessors
+        li#a3 Use Pug for maintainable HTML
+        li#a4 Go max static w/CDN for Perf.
+        li#a5d Use AppShell and page transitions
+        li#a6 Use AMP and please visitors
+        li#a7.t--selected Be DOM-centric and designer-friendly
+        li#a8 Use PageBusiness and Promises for cleaner code
+    //-ul.step.step3     
+        li#a9 Web Components
+        li#a10 Mobile Apps        
+
+script.
+    function topic8Loaded(){
+        var bx1 = $('#topic8p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+        var bx2 = $('#topic8p #bx2v')
+        bx2.css('opacity', 1);
+        bx2.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic8p #a7');
+        var a2 = $('#topic8p #a8');
+
+        if (animate) {
+            var tl = new TimelineMax();
+            tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+            tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+            tl.play();
+        }
+    }
+    function topic8Setup(){
+        if (animate)
+        {
+            $('#topic8p .box').css('opacity',0);
+            $('#topic8p .box').css('filter', 'grayscale(100%)');
+            $('#topic8p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic8p .box').removeClass("mui--z4");
+        }    
+    } 

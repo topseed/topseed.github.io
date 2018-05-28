@@ -1,0 +1,30 @@
+#callbackep
+    .topicbox.topicbox-2.mui--z4 
+        .topicbox--middle Have you encountered 'Callback Hell'?
+    .thumb.thumb-1.mui--z1
+    .thumb.thumb-2.thumb-2--selected.mui--z1
+    .thumb.thumb-3.mui--z1
+    .thumb-txt.thumb-txt-2 Bricks and Mortar
+    //-#tbd.headline.headline__sub(style='top:27.3vw') [TBD Next Steps] 
+    img#callb(src='../200-bricks/res/callback.png')
+    //-#capt.headline.headline__sub(style='top:27.3vw; text-align: left;') Really? 
+
+script.
+    var animateMaterial = true;
+
+    function callbackLoaded(){ 
+        /*if (animateMaterial)
+        {
+            var tl = new TimelineMax();
+            tl[4] = tl;
+            tl.to($('#materialp #tbd'), 3, {opacity:100, ease:Power1.easeIn}, '+=0');
+            tl.play();
+        }*/
+    } 
+
+    function page4Setup(animate){
+        animatePage4 = animate;
+        if (animatePage4)
+            $('#callbackp #tbd').css('opacity',0);
+    }
+

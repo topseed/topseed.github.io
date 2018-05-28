@@ -1,0 +1,63 @@
+#topic3p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z2
+        .box--middle 
+            //-| Step I:
+            //-br
+            | The Foundation
+    //-#bx2v.box.box-2v.box-2--selected
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    //-#bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step1
+        li#a1 Apply Design Guidelines
+        li#a2.t--selected Use SASS, BEM, Preprocessors for clean, maintainable CSS
+        li#a3 Use Pug for clean, maintainable HTML
+        li#a4 Performance
+    //-ul.step.step2      
+        li#a5 SPA/Rich client 'feel'
+        li#a6 Time to Glass
+        li#a7 HTML vs. JavaScript
+        li#a8 Business Logic
+    //-ul.step.step3     
+        li#a9 Web Components
+        li#a10 Mobile Apps        
+
+script.
+    function topic3Loaded(){
+
+        var bx1 = $('#topic3p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic3p #a2');
+        var a2 = $('#topic3p #a3');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a2, 2, {css: {className:'+=t--selected'}}, 2); 
+            tl.to(a1, 2, {css: {className:'-=t--selected'}}, 2); 
+            tl.play();
+        }
+        else
+        {
+           a2.addClass("t--selected"); 
+        }
+    }
+    function topic3Setup(){
+        if (animate)
+        {
+            $('#topic3p .box').css('opacity',0);
+            $('#topic3p .box').css('filter', 'grayscale(100%)');
+            $('#topic3p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic3p .box').removeClass("mui--z4");
+        }    
+    } 

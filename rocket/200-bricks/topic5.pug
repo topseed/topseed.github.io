@@ -1,0 +1,70 @@
+#topic5p
+    //-.headline(style='top:11.5vw') 3 Easy Steps to Best Practices
+    #bx1v.box.box-1v.box-1--selected.mui--z1
+        .box--middle 
+            //-| Step I:
+            //-br
+            | The Foundation
+    #bx2v.box.box-2v.box-2--selected
+        .box--middle 
+            | Step II:
+            br
+            | The Bricks and Mortar
+    //-#bx3v.box.box-3v.box-3--selected
+        .box--middle 
+            | Step III:
+            br
+            | The Perspectives
+
+    ol.step.step1
+        li#a1 Apply Design Guidelines
+        li#a2 Use SASS, BEM, Preprocessors
+        li#a3 Use Pug for maintainable HTML
+        li#a4.t--selected Go max static w/CDN for Perf.
+        li#a5 Use AppShell and page transitions to improve perceived performance
+        li#a6 Time to Glass
+        li#a7 HTML vs. JavaScript
+        li#a8 Business Logic
+        //-li#a9 Web Components
+        //-li#a10 Mobile Apps        
+
+script.
+    function topic5Loaded(){
+
+        var bx1 = $('#topic5p #bx1v')
+        bx1.css('opacity', 1);
+        bx1.css('filter', 'grayscale(0%)');
+        var bx2 = $('#topic5p #bx2v')
+        //bx2.css('opacity', 1);
+        //bx2.css('filter', 'grayscale(0%)');
+
+        var a1 = $('#topic5p #a4');
+        var a2 = $('#topic5p #a5');
+
+        if (animate)
+        {
+            var tl = new TimelineMax();
+            tl.to(a1, 1, {css: {className:'-=t--selected'}}, 1); 
+            tl.to(bx2, 1.5, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn}, 2);
+            tl.to(bx2, 1.5, {opacity:100, ease:Power2.easeIn}, 2);
+            tl.from(bx2, 1.5, {scale:.93, ease:Power1.easeIn}, 2);
+            tl.call(function() {bx2.addClass("mui--z2");}, null, null, 2);
+            tl.to(a2, 1.5, {css: {className:'+=t--selected'}, ease:Power2.easeIn}, 3.5); 
+
+            tl.play();
+        }
+        else
+        {
+           a1.removeClass("t--selected"); 
+           a2.addClass("t--selected"); 
+        }
+    }
+    function topic5Setup(){
+        if (animate)
+        {
+            $('#topic5p .box').css('opacity',0);
+            $('#topic5p .box').css('filter', 'grayscale(100%)');
+            $('#topic5p .box').css('-webkit-filter', 'grayscale(100%)');
+            $('#topic5p .box').removeClass("mui--z4");
+        }    
+    } 
