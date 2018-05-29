@@ -2,12 +2,12 @@ brand: rocketpug
 url: www.rocketpug.org
 motto: Dev made 10 times faster.
 title: Rocketpug - a development productivity suite
-byline: rocketpug.org
+subtitle: rocketpug.org
 author: Wolfgang Gehner
 date: June 2018
 icon: /rocket/master/res/paw.svg
 texticon: /rocket/master/res/rocketpug.svg 
-
+ 
 m1: Nbake
 m2label: Pillar I
 m2: Topseed
