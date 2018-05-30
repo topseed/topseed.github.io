@@ -1,7 +1,7 @@
 extends  ../_part/_baseShell
 
 block head
-    title Rocketpug
+    title #{pagetitle}
     include ../_part/_header
 
 block main
@@ -11,7 +11,7 @@ block main
                 .mui--text-center
                     include ../_part/_top
                     include ../001-intro/title
-        //-.section
+        .section
             #header
                 .mui--text-center
                     include ../_part/_top
@@ -40,42 +40,37 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/material
+                    include ../100-basics/what
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/mui
+                    include ../100-basics/jamdef
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/topic2
+                    include ../100-basics/jambenefits
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/brokencss
+                    include ../100-basics/prod
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/fixedcss
+                    include ../100-basics/serverless
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/bem
+                    include ../100-basics/staticgen
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/prepros
-        .section
-            #header
-                .mui--text-center
-                    include ../_part/_top
-                    include ../100-basics/topic3
+                    include ../100-basics/declarative
         .section
             #header
                 .mui--text-center
@@ -85,12 +80,83 @@ block main
             #header
                 .mui--text-center
                     include ../_part/_top
+                    include ../100-basics/express
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/codepen
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/metabake 
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic2
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/repeat
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/yaml
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/yamldata
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/cli
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/jstrans
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/layout
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/topic3
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/apidir
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/apisearch
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
+                    include ../100-basics/nbakeapi
+        .section
+            #header
+                .mui--text-center
+                    include ../_part/_top
                     include ../100-basics/topic4
         .section
             #header
                 .mui--text-center
                     include ../_part/_top
-                    include ../100-basics/cdn
+                    include ../100-basics/ide
+        //-
         .section
             #header
                 .mui--text-center
@@ -227,11 +293,11 @@ block main
         function UIinit() {
 
             $('#fullpage').fullpage({
-                anchors: ['title', /*'who',*/ 'steps', 'topics'
-                    , 'step1', 'topic1', 'material', 'mui' 
-                    , 'topic2', 'brokencss', 'fixedcss', 'bem', 'prepros' 
-                    , 'topic3', 'pug' 
-                    , 'topic4', 'cdn'
+                anchors: ['title', 'who', 'steps', 'topics'
+                    , 'step1', 'topic1', 'what1', 'jamdef', 'jambenefits', 'prod', 'serverless', 'staticgen', 'declarative', 'pug', 'express', 'codepen', 'metabake'
+                    , 'topic2', 'repeat', 'yaml', 'yamldata', 'cli',' jstrans', 'layout' 
+                    , 'topic3', 'apidir', 'apisearch', 'nbakeapi' 
+                    , 'topic4', 'ide'
                     , 'steps2', 'topic5', 'appshell', 'trans' 
                     , 'topic6', 'amp', 'ampsource'
                     , 'topic7', 'javascript', 'dom'
@@ -252,7 +318,6 @@ block main
                         case 'topics': topicsLoaded(); return
                         case 'step1': step1Loaded(); return
                         case 'topic1': topic1Loaded(); return
-                        case 'material': materialLoaded(); return
                         case 'topic2': topic2Loaded(); return
                         case 'topic3': topic3Loaded(); return
                         case 'topic4': topic4Loaded(); return

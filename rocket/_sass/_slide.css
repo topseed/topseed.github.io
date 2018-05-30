@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #whoami, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.mui--z1, .screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #whoami, #wolf, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #pugimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -38,6 +38,101 @@
 #stepsp .box {
   opacity: 0; }
 
+#jamdefimg {
+  left: 31vw;
+  width: 35.4vw;
+  height: 33.6vw; }
+
+#jambenefitsimg {
+  width: 67.2vw;
+  height: 32.4vw; }
+
+#prodimg {
+  left: 16.4vw;
+  width: 67.2vw;
+  height: 24.4vw; }
+
+#serverlessimg {
+  left: 31vw;
+  width: 36vw;
+  height: 33.6vw; }
+
+#staticgenimg {
+  left: 31vw;
+  width: 36.4vw;
+  height: 33.6vw; }
+
+#declarativeimg {
+  left: 31vw;
+  width: 43.2vw;
+  height: 33.6vw; }
+
+#pugimg {
+  left: 27vw;
+  width: 54.1vw;
+  height: 33.6vw; }
+
+#expressimg {
+  width: 48.6vw;
+  height: 33.6vw; }
+
+#codepenimg {
+  left: 31vw;
+  width: 29.5vw;
+  height: 33.6vw; }
+
+#metabakeimg {
+  left: 21vw;
+  width: 65.3vw;
+  height: 33.6vw; }
+
+#repeatimg {
+  width: 50.7vw;
+  height: 33.6vw; }
+
+#yamlimg {
+  left: 16.4vw;
+  width: 67.2vw;
+  height: 21.5vw; }
+
+#yamldataimg {
+  left: 20vw;
+  width: 62.3vw;
+  height: 33.6vw; }
+
+#cliimg {
+  left: 20vw;
+  width: 67.2vw;
+  height: 29.6vw; }
+
+#jstransimg {
+  left: 16.4vw;
+  width: 67.2vw;
+  height: 26.7vw; }
+
+#layoutimg {
+  left: 31vw;
+  width: 22.4vw;
+  height: 33.6vw; }
+
+#apidirimg {
+  width: 50.4vw;
+  height: 33.6vw; }
+
+#apisearchimg {
+  width: 51.6vw;
+  height: 30.5vw; }
+
+#nbakeapiimg {
+  left: 16.2vw;
+  top: 25vw;
+  width: 67.2vw;
+  height: 15vw; }
+
+#ideimg {
+  width: 60.2vw;
+  height: 33.6vw; }
+
 #md {
   height: 33.6vw; }
 
@@ -55,12 +150,6 @@
 
 #preprosimg {
   height: 32.5vw; }
-
-#pugimg {
-  top: 20vw;
-  left: 16vw;
-  width: 67.2vw;
-  height: 34.9vw; }
 
 #cdnimg {
   left: 31vw;

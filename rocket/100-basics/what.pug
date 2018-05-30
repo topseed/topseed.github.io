@@ -1,30 +1,3 @@
 #step1p
     .headline(style='top:11.5vw') What is Nbake?
-    .headline(style='top:30.5vw') A blazingly fast static site generation tool that runs in the cloud or locally.
-
-script.
-    var animatePage5 = true;
-    function step1Loaded(){
-        if (animatePage5)
-        {
-            var tl = new TimelineMax();
-            tl[5] = tl;
-            var bx1 = $('#step1p #bx1'); 
-
-            tl.to(bx1, 0, {'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)',ease:Power1.easeIn});
-            tl.to(bx1, 0, {opacity:100, ease:Power1.easeIn}, 0);
-            tl.from(bx1, 0, {scale:.93, ease:Power1.easeIn}, 0);
-            tl.call(function() {bx1.addClass("mui--z4");}, null, null, 0);
-            tl.play();
-        }
-    }
-    function page5Setup(animate){
-        animatePage5 = animate;
-        if (animatePage5)
-        {
-            $('#step1p .box').css('opacity',0);
-            $('#step1p .box').css('filter', 'grayscale(100%)');
-            $('#step1p .box').css('-webkit-filter', 'grayscale(100%)');
-            $('#step1p .box').removeClass("mui--z4");
-        }    
-    } 
+    .headline(style='top:28.5vw') #{what_msg}
