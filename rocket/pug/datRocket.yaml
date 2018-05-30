@@ -50,7 +50,7 @@ t2s: CLI to build Pug+YAML
 repeat_msg: Some HTML content is repetitive, such as social media tags.
 yaml_msg: Rocketpug uses YAML for repeated values.
 yamldata_msg: Rocketpug YAML lets you create data about your pages.
-cli_msg: Rocketpug uses the NBAKE Command Line Tool to generate HTML from Pug+YAML.
+cli_msg: Rocketpug uses the NBAKE Command Line Tool to generate HTML (and JSON) from Pug+YAML.
 jstrans_msg: Gulp, Grunt etc. are not always up to date. Nbake uses the latest JavaScript transformers.
 layout_msg: With Rocketpug Pug+YAML you can easily build modular sites and apps that reuse layouts.
 
