@@ -1,17 +1,17 @@
-brand: METAbakee
-url: www.METAbake.org
+brand: rocketpug
+url: www.rocketpug.org
 motto: Dev made 10 times faster.
-title: METAbake - a development productivity suite
-subtitle: METAbake.org
+title: Rocketpug - a development productivity suite
+subtitle: rocketpug.org
 author: Wolfgang Gehner
 date: June 2018
-icon: /rocket/master/res/star.svg
-texticon: https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif
-pagetitle: METAbake
+icon: /rocket/master/res/paw.svg
+texticon: /rocket/master/res/rocketpug.svg
+pagetitle: Rocketpug
 
-m1: nbake
+m1: Nbake
 m1label: Pillar I
-m2: PWA-router
+m2: Topseed
 m2label: Pillar II
 m3: META
 m3label: Pillar III
@@ -30,58 +30,58 @@ t10: Admin App
 # Section I
 
 #topic 1
-t1summary: nbake builds serverless Pug JAMstack
+t1summary: Nbake builds serverless Pug JAMstack
 t1s: Builds Pug JAMstack
 what_msg: A blazingly fast static site generation tool that runs in the cloud or locally.
-jamdef_msg: METAbake is a JAMstack that uses Pug for markup.
+jamdef_msg: Rocketpug is a JAMstack that uses Pug for markup.
 jambenefits_msg: JAM has a lot of benefits.
-prod_msg: METAbake's goal is to deliver 10 times faster than is possible on a classic LAMP stack.
-serverless_msg: Not having to worry about server code or infrastructure helps. METAbake uses a CDN, S3 or others instead.
-staticgen_msg: To be serverless, METAbake nbake generates static site content.
+prod_msg: Rocketpug's goal is to deliver 10 times faster than is possible on a classic LAMP stack.
+serverless_msg: Not having to worry about server code or infrastructure helps. Rocketpug uses a CDN, S3 or others instead.
+staticgen_msg: To be serverless, Rocketpug Nbake generates static site content.
 declarative_msg: Low-code with declarative markup (4GL) provides higher productivity than procedural programming (3GL). We assume you know HTML and CSS. 
-pug_msg: METAbake uses Pug markup to make creating HTML a breeze.
+pug_msg: Rocketpug uses Pug markup to make creating HTML a breeze.
 express_msg: Node Express uses Pug by default. See "Do you even Jade Bro" on YouTube by Google Engineer.
 codepen_msg: Codepen also uses Pug.
-metabake_msg: METAbake uses open source technology, see https://github.com/metabake.
+metabake_msg: Rocketpug uses open source technology, see https://github.com/metabake.
 
 #topic 2
-t2summary: nbake has command line interface to build Pug+YAML
+t2summary: Nbake has command line interface to build Pug+YAML
 t2s: CLI to build Pug+YAML
 repeat_msg: Some HTML content is repetitive, such as social media tags.
-yaml_msg: METAbake uses YAML for repeated values.
-yamldata_msg: METAbake YAML lets you create data about your pages.
-cli_msg: METAbake uses the nbake Command Line Tool to generate HTML (and JSON) from Pug+YAML.
-jstrans_msg: Gulp, Grunt etc. are not always up to date. nbake uses the latest JavaScript transformers.
-layout_msg: With METAbake Pug+YAML you can easily build modular sites and apps that reuse layouts.
+yaml_msg: Rocketpug uses YAML for repeated values.
+yamldata_msg: Rocketpug YAML lets you create data about your pages.
+cli_msg: Rocketpug uses the NBAKE Command Line Tool to generate HTML (and JSON) from Pug+YAML.
+jstrans_msg: Gulp, Grunt etc. are not always up to date. Nbake uses the latest JavaScript transformers.
+layout_msg: With Rocketpug Pug+YAML you can easily build modular sites and apps that reuse layouts.
 
 #topic 3
-t3summary: nbake has an API that runs in the cloud or locally
+t3summary: Nbake has an API that runs in the cloud or locally
 t3s: API in cloud or locally
-apidir_msg: There are many public APIs that METAbake serverless apps can call.
+apidir_msg: There are many public APIs that Rocketpug serverless apps can call.
 apisearch_msg: There are even APIs that enable fulltext-search on your static resources.
-nbakeapi_msg: nbake has a convenient API to trigger builds.
+nbakeapi_msg: Nbake has a convenient API to trigger builds.
 
 #topic 4
-t4summary: nbake allows for easy IDE integration
+t4summary: Nbake allows for easy IDE integration
 t4s: Easy IDE integration
-ide_msg: The nbake API allows for easy IDE integration with auto-build (e.g. VS Code on save).
+ide_msg: The Rocketpug API allows for easy IDE integration with auto-build (e.g. VS Code on save).
 
 # Section II
 
 #topic 5
-t5summary: PWA-router has a Hello World example app with loader
+t5summary: Topseed has a Hello World example app with loader
 t5s: Hello World with loader 
 
 #topic 6
-t6summary: PWA-router has a blog example with dynamic HTML
+t6summary: Topseed has a blog example with dynamic HTML
 t6s: Blog example w/dynamic HTML
 
 #topic 7
-t7summary: PWA-router has a router for Appstore apps
+t7summary: Topseed has a router for Appstore apps
 t7s: Router for Appstore apps
 
 #topic 8
-t8summary: PWA-router has a Pug component example
+t8summary: Topseed has a Pug component example
 t8s: Pug Component example
 
 # Section III
@@ -89,7 +89,17 @@ t8s: Pug Component example
 #topic 9
 t9summary: META has a build server running in the cloud
 t9s: Build Server in the cloud
+cloudbuild_msg: It is a Best Practice to run a build server in the cloud. Jenkins is a good example.
+mountduck_msg: Mount software lets you mount server and cloud storage as local drives. We like Mountainduck or WebDrive (Win).
+cloudapi_msg: One way to trigger a build is to call the META build server URL, ideally from your IDE.
+metabuild_msg: Another way to trigger builds is via the META build server UI.
+docker_msg: A META build server can be installed from a docker image.
+typescript_msg: 'The META build server is written in Pug and Typescript, so you can easily extend it. For example: add SASS-compiler.'
 
 #topic 10
 t10summary: META has a sample admin app
 t10s: Sample admin app
+admin_msg: Popular platforms have admin apps.
+blogadmin_msg: You can use the META sample admin app to update a blog (or other apps).
+adminide_msg: The META sample admin app is a 'mini Web IDE'. You can use it to add/clone/edit Pug and other files, without a local IDE.
+webide_msg: 'The Rocketpug vision: a remote-friendly group development environment/Web IDE.'

@@ -1,7 +1,7 @@
 .body {
   opacity: 1; }
 
-.mui--z1, .screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.mui--z1, .screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #cloudbuildimg, #mountduckimg, #cloudapiimg, #metabuildimg, #dockerimg, #typescriptimg, #adminimg, #blogadminimg, #adminideimg, #webideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
+.screenshot, #whoami, #wolf, #jamdefimg, #jambenefitsimg, #prodimg, #serverlessimg, #staticgenimg, #declarativeimg, #pugimg, #expressimg, #codepenimg, #metabakeimg, #repeatimg, #yamlimg, #yamldataimg, #cliimg, #jstransimg, #layoutimg, #apidirimg, #apisearchimg, #nbakeapiimg, #ideimg, #cloudbuildimg, #mountduckimg, #cloudapiimg, #metabuildimg, #dockerimg, #typescriptimg, #adminimg, #blogadminimg, #adminideimg, #webideimg, #md, #muiimg, #brokencssimg, #fixedcssimg, #bemimg, #preprosimg, #cdnimg, #appshellimg, #transimg, #ampimg, #ampsrc, #javascr, #domimg, #callb, #promiseimg, #fetchi, #legos, #dash, #relig, #agauge, #brows, #phoneg {
   position: absolute;
   top: 21vw;
   left: 22vw;
@@ -131,6 +131,54 @@
 
 #ideimg {
   width: 60.2vw;
+  height: 33.6vw; }
+
+/* Section 3 */
+#cloudbuildimg {
+  left: 33.7vw;
+  width: 42.6vw;
+  height: 33.6vw; }
+
+#mountduckimg {
+  top: 25vw;
+  left: 16.4vw;
+  width: 67.2vw;
+  height: 13.3vw; }
+
+#cloudapiimg {
+  width: 64.3vw;
+  height: 33.6vw; }
+
+#metabuildimg {
+  width: 53.7vw;
+  height: 33.6vw; }
+
+#dockerimg {
+  width: 54.9vw;
+  height: 33.6vw; }
+
+#typescriptimg {
+  top: 25vw;
+  left: 16.4vw;
+  width: 67.2vw;
+  height: 13.9vw; }
+
+#adminimg {
+  width: 49.9vw;
+  height: 33.6vw; }
+
+#blogadminimg {
+  left: 30vw;
+  width: 41.8vw;
+  height: 33.6vw; }
+
+#adminideimg {
+  width: 58.6vw;
+  height: 33.6vw; }
+
+#webideimg {
+  left: 19vw;
+  width: 67.1vw;
   height: 33.6vw; }
 
 #md {
