@@ -79,7 +79,7 @@ cssbroken_msg: CSS is broken!
 sass_msg: 'The good news: SASS fixes CSS.'
 presass_msg: A lot of HTML editors support SASS compilation.
 frontend_msg: METAbake allows you to use any frontend CSS framework you like.
-frontendtop10_msg: The SPA sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version.
+frontendtop10_msg: The SPA sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version of Semantic UI.
 loader_msg: All sample projects use the tiny (789 bytes) loadjs as loader and dependency manager.
 loadjs_msg: Loadjs allows to execute code when one or several 'bundles' have been loaded and are 'ready'. 
 
@@ -89,7 +89,7 @@ t6s: Blog example w/dynamic HTML
 blogsite_msg: 'SPA has a blog example app. You can get it from https://github.com/topseed/nbake-intro-blog.'
 datatables_msg: The blog dynamic content rendering is inspired by Datatables' obtaining data from JSON.
 itemsjson_msg: "'nbake -i' aggregates YAML in subfolders to one items.json."
-pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render json list content."
+pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render JSON list content."
 blogselect_msg: "The Blog example includes several versions: One that renders a full list of articles, one that has an 'infinite scroll' (/infinite) and one that has a multi-select dropdown (/select)."
 firestore_msg: If you still need a database, you may consider Firestore.
 rest_msg: Consider using existing APIs for data access rather than rolling your own.
@@ -111,7 +111,7 @@ jsframeworks_msg: We seen many component frameworks come in and out of fashion o
 poly_msg: Riot is DOM-based, so we can write Riot components in Pug.
 riottag_msg: This is an example RIOT component with databinding, written in Pug. It is in the Hello World project.
 riotcompile_msg: "'nbake -t' generates the JavaScript on files that end in '-tag.pug'. The output looks like React, but was easy to build."
-riotimport_msg: To use the component, import the .js in the page, mount and call the method. Component done!
+riotimport_msg: To use the component, import the .js in the page, mount and call the method. Done!
 
 
 # Section III

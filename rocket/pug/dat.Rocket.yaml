@@ -79,7 +79,7 @@ cssbroken_msg: CSS is broken!
 sass_msg: 'The good news: SASS fixes CSS.'
 presass_msg: A lot of HTML editors support SASS compilation.
 frontend_msg: Rocketpug allows you to use any frontend CSS framework you like.
-frontendtop10_msg: The Topseed sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version.
+frontendtop10_msg: The Topseed sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version of Semantic UI.
 loader_msg: All sample projects use the tiny (789 bytes) loadjs as loader and dependency manager.
 loadjs_msg: Loadjs allows to execute code when one or several 'bundles' have been loaded and are 'ready'. 
 
@@ -89,7 +89,7 @@ t6s: Blog example w/dynamic HTML
 blogsite_msg: 'Topseed has a blog example app. You can get it from https://github.com/topseed/nbake-intro-blog.'
 datatables_msg: The blog dynamic content rendering is inspired by Datatables' obtaining data from JSON.
 itemsjson_msg: "'nbake -i' aggregates YAML in subfolders to one items.json."
-pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render json list content."
+pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render JSON list content."
 blogselect_msg: "The Blog example includes several versions: One that renders a full list of articles, one that has an 'infinite scroll' (/infinite) and one that has a multi-select dropdown (/select)."
 firestore_msg: If you still need a database, you may consider Firestore.
 rest_msg: Consider using existing APIs for data access rather than rolling your own.
