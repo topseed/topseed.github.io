@@ -32,7 +32,7 @@ t10: Admin App
 #topic 1
 t1summary: Nbake builds serverless Pug JAMstack
 t1s: Builds Pug JAMstack
-what_msg: A blazingly fast static site generation tool that runs in the cloud or locally.
+s1what_msg: A blazingly fast static site generation tool that runs in the cloud or locally.
 jamdef_msg: Rocketpug is a JAMstack that uses Pug for markup.
 jambenefits_msg: JAM has a lot of benefits.
 prod_msg: Rocketpug's goal is to deliver 10 times faster than is possible on a classic LAMP stack.
@@ -52,7 +52,7 @@ yaml_msg: Rocketpug uses YAML for repeated values.
 yamldata_msg: Rocketpug YAML lets you create data about your pages.
 cli_msg: Rocketpug uses the NBAKE Command Line Tool to generate HTML (and JSON) from Pug+YAML.
 jstrans_msg: Gulp, Grunt etc. are not always up to date. Nbake uses the latest JavaScript transformers.
-layout_msg: With Rocketpug Pug+YAML you can easily build modular sites and apps that reuse layouts.
+#layout_msg: With Rocketpug Pug+YAML you can easily build modular sites and apps that reuse layouts.
 
 #topic 3
 t3summary: Nbake has an API that runs in the cloud or locally
@@ -70,31 +70,62 @@ ide_msg: The Rocketpug API allows for easy IDE integration with auto-build (e.g.
 
 #topic 5
 t5summary: Topseed has a Hello World example app with loader
-t5s: Hello World with loader 
+t5s: Hello World with loader
+s2what_msg: Pug example projects that help you build performant sites and mobile apps more quickly. 
+s2what_subtitle: If you like other than the selected libraries and frameworks, you can add or replace.
+hello_msg:  You can create a Hello World example with 'nbake -s.'
+layout_msg: It is a modular site where multiple pages share a common layout.
+cssbroken_msg: CSS is broken!
+sass_msg: 'The good news: SASS fixes CSS.'
+presass_msg: A lot of HTML editors support SASS compilation.
+frontend_msg: Rocketpug allows you to use any frontend CSS framework you like.
+frontendtop10_msg: The Topseed sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version.
+loader_msg: All sample projects use the tiny (789 bytes) loadjs as loader and dependency manager.
+loadjs_msg: Loadjs allows to execute code when one or several 'bundles' have been loaded and are 'ready'. 
 
 #topic 6
 t6summary: Topseed has a blog example with dynamic HTML
 t6s: Blog example w/dynamic HTML
+blogsite_msg: 'Topseed has a blog example app. You can get it from https://github.com/topseed/nbake-intro-blog.'
+datatables_msg: The blog dynamic content rendering is inspired by Datatables' obtaining data from JSON.
+itemsjson_msg: "'nbake -i' aggregates YAML in subfolders to one items.json."
+pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render json list content."
+blogselect_msg: "The Blog example includes several versions: One that renders a full list of articles, one that has an 'infinite scroll' (/infinite) and one that has a multi-select dropdown (/select)."
+firestore_msg: If you still need a database, you may consider Firestore.
+rest_msg: Consider using existing APIs for data access rather than rolling your own.
 
 #topic 7
 t7summary: Topseed has a router for Appstore apps
 t7s: Router for Appstore apps
+turbolinks_msg: Topseed has a router that is inspired by Turbolinks and Smoothstate.
+appshell_msg: "On navigation, the router only replaces content in AppShell; this creates a 'Rich client feel' and improves perceived performance."
+router_msg: In this example, the content in the 'router' div tag is replaced on navigation.
+spaevents_msg: A router lets you have Single-Page-Application (SPA) events. You can use them for content transitions (here provided by Semantic UI 'transition' JavaScript).
+cordova_msg: You can use the Cordova in-app browser to render the content/AppShell as an Appstore app, with app permissions.
+appstore_msg: With this approach you can deliver multi-platform Appstore apps without specialized Android/iOS GUI developers.
 
 #topic 8
 t8summary: Topseed has a Pug component example
 t8s: Pug Component example
+jsframeworks_msg: We seen many component frameworks come in and out of fashion over time. 
+poly_msg: Riot is DOM-based, so we can write Riot components in Pug.
+riottag_msg: This is an example RIOT component with databinding, written in Pug. It is in the Hello World project.
+riotcompile_msg: "'nbake -t' generates the JavaScript on files that end in '-tag.pug'. The output looks like React, but was easy to build."
+riotimport_msg: To use the component, import the .js in the page, mount and call the method. Component done!
+
 
 # Section III
 
 #topic 9
 t9summary: META has a build server running in the cloud
 t9s: Build Server in the cloud
+s3what_msg: A cloud based build and admin app infrastructure that you can adapt to deliver custom admin functionality to your clients quickly and easily.
 cloudbuild_msg: It is a Best Practice to run a build server in the cloud. Jenkins is a good example.
-mountduck_msg: Mount software lets you mount server and cloud storage as local drives. We like Mountainduck or WebDrive (Win).
-cloudapi_msg: One way to trigger a build is to call the META build server URL, ideally from your IDE.
+mountduck_msg: Mount software lets you mount server and cloud storage as local drives (e.g. drive X:\\). We like Mountainduck or WebDrive (Win).
+cloudapi_msg: "One way to trigger a build is to call the META build server URL, ideally from your IDE (here: VS Code)."
 metabuild_msg: Another way to trigger builds is via the META build server UI.
 docker_msg: A META build server can be installed from a docker image.
-typescript_msg: 'The META build server is written in Pug and Typescript, so you can easily extend it. For example: add SASS-compiler.'
+typescript_msg: 'The META build server is written in Pug and Typescript, so you can easily extend it. For example: add SASS compiler.'
 
 #topic 10
 t10summary: META has a sample admin app
@@ -103,3 +134,6 @@ admin_msg: Popular platforms have admin apps.
 blogadmin_msg: You can use the META sample admin app to update a blog (or other apps).
 adminide_msg: The META sample admin app is a 'mini Web IDE'. You can use it to add/clone/edit Pug and other files, without a local IDE.
 webide_msg: 'The Rocketpug vision: a remote-friendly group development environment/Web IDE.'
+
+#Section 4
+plans_msg: Rocketpug is open source but commercial support, software-as-service, co-hosting and training is available.

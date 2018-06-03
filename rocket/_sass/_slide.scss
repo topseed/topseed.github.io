@@ -82,7 +82,7 @@
 
 #pugimg {
     @extend .screenshot;
-    left: 27vw;
+    left: 22.8vw;
     width: 54.1vw;
     height: 33.6vw;
 }
@@ -102,7 +102,7 @@
 
 #metabakeimg {
     @extend .screenshot;
-    left: 21vw;
+    left: 19vw;
     width: 65.3vw;
     height: 33.6vw;
 }
@@ -141,13 +141,6 @@
     height: 26.7vw;
 }
 
-#layoutimg {
-    @extend .screenshot;
-    left: 31vw;
-    width: 22.4vw;
-    height: 33.6vw;
-}
-
 #apidirimg {
     @extend .screenshot;
     width: 50.4vw;
@@ -174,10 +167,191 @@
     height: 33.6vw;
 }
 
+/* Section 2 */
+
+#helloimg {
+    @extend .screenshot;
+    left: 31vw;
+    width: 42.4vw;
+    height: 33.6vw;
+}
+#layoutimg {
+    @extend .screenshot;
+    left: 34vw;
+    width: 22.4vw;
+    height: 33.6vw;
+}
+#cssbrokenimg {
+    @extend .screenshot;
+    //left: 31vw;
+    width: 44.8vw;
+    height: 33.6vw;
+}
+#sassimg {
+    @extend .screenshot;
+    left: 17.8vw;
+    width: 64.3vw;
+    height: 33.6vw;
+}
+#presassimg {
+    @extend .screenshot;
+    left: 31vw;
+    width: 32.4vw;
+    height: 33.6vw;
+}
+#frontendimg {
+    @extend .screenshot;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 31.6vw;
+}
+#frontendtop10img {
+    @extend .screenshot;
+    left: 38.1vw;
+    width: 23.8vw;
+    height: 33.6vw;
+}
+#loaderimg {
+    @extend .screenshot;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 26.1vw;
+}
+#loadjsimg {
+    @extend .screenshot;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 30.6vw;
+}
+
+/* item 6 */
+#blogsiteimg {
+    @extend .screenshot;
+    //left: 33.7vw;
+    width: 56.1vw;
+    height: 33.6vw;
+}
+#datatablesimg {
+    @extend .screenshot;
+    left: 35.1vw;
+    width: 29.8vw;
+    height: 33.6vw;
+}
+#itemsjsonimg {
+    @extend .screenshot;
+    left: 36.7vw;
+    width: 26.6vw;
+    height: 33.6vw;
+}
+#pugtemplateimg {
+    @extend .screenshot;
+    left: 30.7vw;
+    width: 38.5vw;
+    height: 33.6vw;
+}
+#blogselectimg {
+    @extend .screenshot;
+    //left: 33.7vw;
+    width: 55.7vw;
+    height: 33.6vw;
+}
+#firestoreimg {
+    @extend .screenshot;
+    left: 27.4vw;
+    width: 45.2vw;
+    height: 33.6vw;
+}
+#restimg {
+    @extend .screenshot;
+    //left: 33.7vw;
+    width: 51.7vw;
+    height: 33.6vw;
+}
+
+/* item 7 */
+#turbolinksimg {
+    @extend .screenshot;
+    left: 24.1vw;
+    width: 51.7vw;
+    height: 33.6vw;
+}
+
+#appshellimg {
+    @extend .screenshot;
+    left: 23.4vw;
+    width: 53.2vw;
+    height: 33.6vw;
+}
+#routerimg {
+    @extend .screenshot;
+    //top: 25vw;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 29.9vw;
+}
+#spaeventsimg {
+    @extend .screenshot;
+    left: 23.6vw;
+    width: 52.9vw;
+    height: 33.6vw;
+}
+#cordovaimg {
+    @extend .screenshot;
+    top: 25vw;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 20.1vw;
+}
+#appstoreimg {
+    @extend .screenshot;
+    top: 25vw;
+    left: 34.4vw;
+    width: 31.2vw;
+    height: 16.8vw;
+}
+
+/* item 8 */
+#jsframeworksimg {
+    @extend .screenshot;
+    top: 23vw;
+    left: 23.1vw;
+    width: 53.8vw;
+    height: 22.7vw;
+}
+#polyimg {
+    @extend .screenshot;
+    //top: 25vw;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 28.6vw;
+}
+#riottagimg {
+    @extend .screenshot;
+    //left: 33.7vw;
+    width: 55.9vw;
+    height: 33.6vw;
+}
+#riotcompileimg {
+    @extend .screenshot;
+    top: 25vw;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 15.1vw;
+}
+#riotimportimg {
+    @extend .screenshot;
+    //top: 25vw;
+    left: 16.4vw;
+    width: 67.2vw;
+    height: 32.8vw;
+}
+
+
+
 /* Section 3 */
 #cloudbuildimg {
     @extend .screenshot;
-    left: 33.7vw;
+    left: 23.6vw;
     width: 42.6vw;
     height: 33.6vw;
 }
@@ -233,6 +407,13 @@
     height: 33.6vw;
 }
 
+#plansimg {
+    @extend .screenshot;
+    left: 21vw;
+    width: 58vw;
+    height: 33.6vw;
+}
+
 #md {
      @extend .screenshot;
      height:33.6vw;
@@ -271,10 +452,6 @@
      height: 33.6vw;
 }
 
-#appshellimg {
-     @extend .screenshot;
-     height: 35.8vw;
-}
 
 #transimg {
      @extend .screenshot;
@@ -617,9 +794,12 @@ ol {
    font-weight: bold;
    text-align: center;
    z-index:1;
+   //padding-left: 5vw;
+   //padding-right: 5vw;
 }
 
 .headline__sub {
+    @extend .headline;
     font-size: 2vw;
     font-weight: bold;
 }    
