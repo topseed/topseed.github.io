@@ -1,19 +1,19 @@
-brand: METAbakee
-url: www.METAbake.org
+brand: rocketpug
+url: www.rocketpug.org
 motto: Dev made 10 times faster.
-title: Rock your app development with METAbake
-subtitle: METAbake.org
+title: Rock your app development with Pug
+subtitle: rocketpug.org
 author: Wolfgang Gehner
 date: June 2018
-icon: /rocket/master/res/star.svg
-texticon: https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif
-pagetitle: METAbake
+icon: /rocket/master/res/paw.svg
+texticon: /rocket/master/res/rocketpug.svg
+pagetitle: Rocketpug
 
-m1: nbake
+m1: Nbake
 m1label: Pillar I
-m2: SPA
+m2: Topseed
 m2label: Pillar II
-m3: meta
+m3: META
 m3label: Pillar III
 
 t1: Stack
@@ -30,46 +30,46 @@ t10: Admin App
 # Section I
 
 #topic 1
-t1summary: nbake builds serverless Pug JAMstack
+t1summary: Nbake builds serverless Pug JAMstack
 t1s: Builds Pug JAMstack
 s1what_msg: A blazingly fast static site generation tool that runs in the cloud or locally.
-jamdef_msg: METAbake is a JAMstack that uses Pug for markup.
+jamdef_msg: Rocketpug is a JAMstack that uses Pug for markup.
 jambenefits_msg: JAM has a lot of benefits.
-prod_msg: METAbake's goal is to deliver 10 times faster than is possible on a classic LAMP stack.
-serverless_msg: Not having to worry about server code or infrastructure helps. METAbake uses a CDN, S3 or others instead.
-staticgen_msg: To be serverless, METAbake nbake generates static site content.
+prod_msg: Rocketpug's goal is to deliver 10 times faster than is possible on a classic LAMP stack.
+serverless_msg: Not having to worry about server code or infrastructure helps. Rocketpug uses a CDN, S3 or others instead.
+staticgen_msg: To be serverless, Rocketpug Nbake generates static site content.
 declarative_msg: Low-code with declarative markup (4GL) provides higher productivity than procedural programming (3GL). We assume you know HTML and CSS. 
-pug_msg: METAbake uses Pug markup to make creating HTML a breeze.
+pug_msg: Rocketpug uses Pug markup to make creating HTML a breeze.
 express_msg: Node Express uses Pug by default. See "Do you even Jade Bro" on YouTube by Google Engineer.
 codepen_msg: Codepen also uses Pug.
-metabake_msg: METAbake uses open source technology, see https://github.com/metabake.
+metabake_msg: Rocketpug uses open source technology, see https://github.com/metabake.
 
 #topic 2
 t2summary: Nbake has command line interface to build Pug+YAML
 t2s: CLI to build Pug+YAML
 repeat_msg: Some HTML content is repetitive, such as social media tags.
-yaml_msg: METAbake uses YAML for repeated values.
-yamldata_msg: METAbake YAML lets you create data about your pages.
-cli_msg: METAbake uses the NBAKE Command Line Tool to generate HTML (and JSON) from Pug+YAML.
+yaml_msg: Rocketpug uses YAML for repeated values.
+yamldata_msg: Rocketpug YAML lets you create data about your pages.
+cli_msg: Rocketpug uses the NBAKE Command Line Tool to generate HTML (and JSON) from Pug+YAML.
 jstrans_msg: Gulp, Grunt etc. are not always up to date. Nbake uses the latest JavaScript transformers.
-#layout_msg: With METAbake Pug+YAML you can easily build modular sites and apps that reuse layouts.
+#layout_msg: With Rocketpug Pug+YAML you can easily build modular sites and apps that reuse layouts.
 
 #topic 3
 t3summary: Nbake has an API that runs in the cloud or locally
 t3s: API in cloud or locally
-apidir_msg: There are many public APIs that METAbake serverless apps can call.
+apidir_msg: There are many public APIs that Rocketpug serverless apps can call.
 apisearch_msg: There are even APIs that enable fulltext-search on your static resources.
 nbakeapi_msg: Nbake has a convenient API to trigger builds.
 
 #topic 4
 t4summary: Nbake allows for easy IDE integration
 t4s: Easy IDE integration
-ide_msg: The METAbake API allows for easy IDE integration with auto-build (e.g. VS Code on save).
+ide_msg: The Rocketpug API allows for easy IDE integration with auto-build (e.g. VS Code on save).
 
 # Section II
 
 #topic 5
-t5summary: SPA has a Hello World example app with loader
+t5summary: Topseed has a Hello World example app with loader
 t5s: Hello World with loader
 s2what_msg: Pug example projects that help you build performant sites and mobile apps more quickly. 
 s2what_subtitle: If you like other than the selected libraries and frameworks, you can add or replace.
@@ -78,15 +78,15 @@ layout_msg: It is a modular site where multiple pages share a common layout.
 cssbroken_msg: CSS is broken!
 sass_msg: 'The good news: SASS fixes CSS.'
 presass_msg: A lot of HTML editors support SASS compilation.
-frontend_msg: METAbake allows you to use any frontend CSS framework you like.
-frontendtop10_msg: The SPA sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version.
+frontend_msg: Rocketpug allows you to use any frontend CSS framework you like.
+frontendtop10_msg: The Topseed sample projects use popular Semantic UI for CSS. The Hello World example uses a SASS Version.
 loader_msg: All sample projects use the tiny (789 bytes) loadjs as loader and dependency manager.
 loadjs_msg: Loadjs allows to execute code when one or several 'bundles' have been loaded and are 'ready'. 
 
-#topic 6 
-t6summary: SPA has a blog example with dynamic HTML
+#topic 6
+t6summary: Topseed has a blog example with dynamic HTML
 t6s: Blog example w/dynamic HTML
-blogsite_msg: 'SPA has a blog example app. You can get it from https://github.com/topseed/nbake-intro-blog.'
+blogsite_msg: 'Topseed has a blog example app. You can get it from https://github.com/topseed/nbake-intro-blog.'
 datatables_msg: The blog dynamic content rendering is inspired by Datatables' obtaining data from JSON.
 itemsjson_msg: "'nbake -i' aggregates YAML in subfolders to one items.json."
 pugtemplate_msg: "'nbake .' generates JavaScript files from files that end in '_d.pug'. A generated JavaScript template is used to dynamically render json list content."
@@ -95,9 +95,9 @@ firestore_msg: If you still need a database, you may consider Firestore.
 rest_msg: Consider using existing APIs for data access rather than rolling your own.
 
 #topic 7
-t7summary: SPA has a router for Appstore apps
+t7summary: Topseed has a router for Appstore apps
 t7s: Router for Appstore apps
-turbolinks_msg: SPA has a router that is inspired by Turbolinks and Smoothstate.
+turbolinks_msg: Topseed has a router that is inspired by Turbolinks and Smoothstate.
 appshell_msg: "On navigation, the router only replaces content in AppShell; this creates a 'Rich client feel' and improves perceived performance."
 router_msg: In this example, the content in the 'router' div tag is replaced on navigation.
 spaevents_msg: A router lets you have Single-Page-Application (SPA) events. You can use them for content transitions (here provided by Semantic UI 'transition' JavaScript).
@@ -105,7 +105,7 @@ cordova_msg: You can use the Cordova in-app browser to render the content/AppShe
 appstore_msg: With this approach you can deliver multi-platform Appstore apps without specialized Android/iOS GUI developers.
 
 #topic 8
-t8summary: SPA has a Pug component example
+t8summary: Topseed has a Pug component example
 t8s: Pug Component example
 jsframeworks_msg: We seen many component frameworks come in and out of fashion over time. 
 poly_msg: Riot is DOM-based, so we can write Riot components in Pug.
@@ -133,7 +133,7 @@ t10s: Sample admin app
 admin_msg: Popular platforms have admin apps.
 blogadmin_msg: You can use the META sample admin app to update a blog (or other apps).
 adminide_msg: The META sample admin app is a 'mini Web IDE'. You can use it to add/clone/edit Pug and other files, without a local IDE.
-webide_msg: 'The METAbake vision: a remote-friendly group development environment/Web IDE.'
+webide_msg: 'The Rocketpug vision: a remote-friendly group development environment/Web IDE.'
 
 #Section 4
-plans_msg: METAbake is open source but commercial support, software-as-service, co-hosting and training is available.
+plans_msg: Rocketpug is open source but commercial support, software-as-service, co-hosting and training is available.
